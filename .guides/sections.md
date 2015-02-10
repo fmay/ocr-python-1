@@ -5,20 +5,14 @@ layout: ""
 
 ---
 Learning to program takes time and lots of practice but more importantly should be fun.
-On the training day we will be covering sections of this booklet but it would be unrealistic
-to expect to learn everything over a one day period.
 
-After the training day go back over this booklet. If you are unsure I would recommend
-starting from the beginning and working through all the tasks. It is one thing to read
-through the exercises but this is no substitute for doing them yourself. Not only does
-this help embed the concepts but it also helps you get a feel for the sort of errors
-your students may come across. Each section contains three tasks a, b and c, each of increasing difficulty.
+On the training day we will be covering sections of this booklet but it would be unrealistic to expect to learn everything over a one day period.
 
-Once you are comfortable with the material in this booklet it is hoped you will have a
-strong enough grounding to develop your programming skills in the direction you want.
+After the training day go back over this booklet. If you are unsure I would recommend starting from the beginning and working through all the tasks. It is one thing to read through the exercises but this is no substitute for doing them yourself. Not only does this help embed the concepts but it also helps you get a feel for the sort of errors your students may come across. Each section contains three tasks a, b and c, each of increasing difficulty.
 
-Remember your trainers will be available to contact after the day itself so please do
-not hesitate to email them if any questions arise.
+Once you are comfortable with the material in this booklet it is hoped you will have a strong enough grounding to develop your programming skills in the direction you want.
+
+Remember your trainers will be available to contact after the day itself so please do not hesitate to email them if any questions arise.
 
 
 > ### Tip
@@ -29,14 +23,10 @@ not hesitate to email them if any questions arise.
 
 ## Python
 
-he OCR GCSE in Computing can be carried out using any (imperative) language. The fact this
-course is in Python isn’t to say it is any better than the many alternatives out there but
-it is certainly a good language to teach with.
+he OCR GCSE in Computing can be carried out using any (imperative) language. The fact this course is in Python isn’t to say it is any better than the many alternatives out there but it is certainly a good language to teach with.
 
-Python was designed specifically to be easy to understand and quick to build programs. It is
-used in real world companies such as Google where its creator Guido Van Rossum worked for a while.
-There are currently two versions of Python in use Python 2 and Python 3. Whilst they are both very
-similar there are important differences. In this course we will be looking at **Python 3**.
+Python was designed specifically to be easy to understand and quick to build programs. It is used in real world companies such as Google where its creator Guido Van Rossum worked for a while.
+There are currently two versions of Python in use Python 2 and Python 3. Whilst they are both very similar there are important differences. In this course we will be looking at **Python 3**.
 
 ---
 title: Output to the screen
