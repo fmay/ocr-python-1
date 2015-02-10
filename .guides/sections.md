@@ -41,16 +41,20 @@ similar there are important differences. In this course we will be looking at **
 ---
 title: Output to the screen
 files:
+  - action: close
+    path: "#tabs"
   - action: open
-    path: lesson02/start.py
+    path: 1-screen/start.py
     panel: 0
 layout: 2-panels-tree
-step: lesson02
+step: 1-screen
 
 ---
 ## Hello World
 
 All programmers start with the program hello world. It’s kind of a rite of passage.
+
+**IMPORTANT** : you will be asked to run you program. To do so, simply press the 'Run File' button in the top menu within this application.
 
 ### Task A
 
@@ -91,8 +95,11 @@ title: Storing data in variables
 files:
   - action: close
     path: "#tabs"
+  - action: open
+    path: 2-variables/start.py
+    panel: 0
 layout: ""
-step: lesson03
+step: 2-variables
 
 ---
 We use variables in our programs to store data. Each variable has a name and stores data
@@ -169,6 +176,43 @@ will need to add spaces.
 
 
 
+---
+title: Inputting Data
+files: []
+
+---
+We can now look at starting to make our programs interactive. We are going to take in input from the user using the input command.
+
+```python
+name=input('What is your name?')
+print('Hello '+name)
+```
+
+## Task 3a
+Write a program that asks for the town you live in and then replies I love visiting [town name]
+e.g.
+
+```bash
+Where do you live?  London
+I love visiting London
+```
+
+## Task 3b
+Write a program that asks for your first name then asks for your last name and finally greets you with your full name.
+e.g.
+```bash
+What is your first name? John
+What is your last name? Smith
+Hello John Smith
+```
+
+## Task 3c
+Write a program that asks for your name then prints it out 5 times
+e.g.
+```bash
+What is your name? Trevor
+Trevor Trevor Trevor Trevor Trevor
+```
 ---
 title: "Applying filters to lists "
 files:
