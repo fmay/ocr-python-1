@@ -277,6 +277,215 @@ b=8
 c= [REMAINDER OF PROGRAM HERE]
 ```
 ---
+title: Data Types
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 5-data-types/start.py
+    panel: 0
+layout: ""
+step: 5-data-types
+
+---
+Every variable has a given data type. The most common data types are:
+
+- **String** - Text made up of numbers, letters and characters.
+- **Integer** - Whole numbers. (e.g. 1, 78, 0 and -54)
+- **Float** - Decimal numbers (e.g. 3.5683, 98.74634, -6.3). Float comes under the umbrella of what we often refer to as Real numbers.
+- **Boolean** - True or False
+
+In some languages we have to tell the computer what data type a variable is going to be. Python, on the other hand, is able to decide the data type of the variable according to what value it is first given (or to use the correct term what it is initialised with). This can cause problems when we try to do something with the wrong data type.
+
+## Task A
+Copy and run the following program.
+
+```python
+a=input('Enter number 1:')
+b=input('Enter number 2:')
+c=a+b
+print('Adding your numbers together gives:'+c)
+```
+
+If you enter the numbers `5` and `4` it will output `54`. This is because Python treats anything received through the input function as a string. We need to tell Python we want to convert this string to an integer before putting it into the variable. This is done using type casting.
+
+To cast data to an integer we use int()
+
+Try the program now:
+
+```python
+a = int(input('Enter number 1:'))
+b = int(input('Enter number 2:'))
+c=a+b
+print('Adding your numbers together gives:'+c)
+```
+
+This time you will get an error in line 4: `TypeError: Can't convert 'int' object to str implicitly`.
+
+This is because a and b are now integers as they take in strings converted to integers. This means c is now an integer (as it takes in the sum of to integers which in itself is an integer). 
+
+The problem arises when we then try and add c to a sentence: ‘Adding your numbers together gives:’ We can concatenate strings with strings but in Python we can’t concatenate strings with integers.
+
+The solution is to cast c back to a string when we use it using str().
+
+```python
+a = int(input('Enter number 1:'))
+b = int(input('Enter number 2:'))
+c=a+b
+print('Adding your numbers together gives:'+str(c))
+```
+
+Now the program should work.
+
+
+## Task B
+Write a program that asks for a length and width and outputs the area of a rectangle.
+
+E.g.
+
+```bash
+Please enter width:9
+Please enter height:5
+The area is: 45
+```
+
+## Task C
+The formula for the volume of a cylinder is `PI*r*r*h` where r is the radius of the upper surface and h is the height.
+
+Assume that the user may enter the radius and height as real numbers. To cast these you will need to use float() Write a program that asks you for the radius and height of a cylinder then calculates the volume and area.
+
+*HNT: use `math.pi` as a special variable that gives PI. In order to use this, you will need to include `import math` at the top of your code.*
+
+
+---
+title: Selection with If
+files: []
+
+---
+Sometimes we only want a program to execute code under certain circumstances. We call this selection. The most commonly used way of doing this is using if. Here we say if a condition is true execute some code.
+
+First we need to make sure we are happy what a condition is. A boolean condition is one that can have only two values true or false.
+
+The boolean comparison operators are as follows:
+
+
+| Operator |Meaning |
+|-|-|
+|== |Equal to |
+| != | Not equal to |
+|< |Less than |
+| > | Greater than |
+| <= | Less than or equal to |
+| >= | ￼Greater than or equal to |
+
+So:
+
+```python
+letter = 'a'
+if letter=='a':
+    print('This prints if letter is a')
+```
+
+We can add as many statements we want inside the if. Each should be indented.
+
+```python
+letter = 'a'
+if letter=='a':
+     print('This prints if letter is a')
+     print('This prints as well')
+```
+
+When we want to stop the if we remove the indentation.
+
+```python
+if letter=='a':
+     print('This prints if letter is a')
+     print('This prints as well')
+print('This prints out whatever the letter is')
+```
+We can tell the computer to do something different when the condition isn’t true using the else keyword.
+
+```python
+if letter=='a':
+     print('This prints if letter is a')
+     print('This prints as well')
+else:
+     print('This prints if the letter is not an a')
+     print('As does this line')
+print('This prints out whatever the letter is')
+
+if letter=='a':
+     print('This prints if letter is a')
+     print('This prints as well')
+elif letter=='b':
+     print('This prints if the letter is b')
+else:
+     print('This prints if the letter is neither a nor b')
+print('This prints out whatever the letter is')
+```
+
+## A Note on Indentation
+When you start a new line after a colon your code (if writing it inside IDLE) you should find your code indented). Lines will keep indenting until you press backspace. Python knows that anything indented is inside the structure with the colon - in this case the if. Indenting is considered good practice in all programming languages as it makes code easier to read but in Python it is even more important as it affects the code’s meaning.
+
+For more complex conditions we can use and, or and not. When you are confident conditions with if should try to find out about these to make your code more efficient.
+
+```python
+x=int(input('Enter a number between 1 and 100: '))
+if x>=1 and x<=100:
+    print('You have entered a valid number')
+else:
+print('Your number is not valid')
+```
+
+A common mistake would be to write the if line as if x>=1 and <=100 missing out the second x. This is wrong and will generate an error.
+
+## Task A
+Copy and run the code below.
+
+```python
+city=input('What is the capital of France?')
+if city== 'Paris':
+     print('Well done')
+elif city=='Lyon':
+     print('Right country, wrong city')
+elif city=='F':
+     print('Terrible joke and wrong answer.')
+else:
+     print('Sorry wrong answer')
+```
+
+Change the question so it asks for the capital of England and gives appropriate answers to different entries.
+
+## Task B
+Below is a program that asks for three numbers and outputs SNAP if they all match. Use your knowledge of the and, or and not operators to make the program more efficient.
+
+```python
+one=int(input('Please enter number 1: '))
+two=int(input('Please enter number 2: '))
+three=int(input('Please enter number 3: '))
+if(one==two):
+    if(two==three):
+        print('SNAP!')
+    else:
+        print('They do not all match')
+else:
+    print('They do not all match')
+```
+
+## Task C
+The grade boundaries for a test are: U below 40
+
+```python
+D – 40
+C – 50
+B – 60
+A – 70
+```
+
+Write a program that asks for a mark and then says what grade it is worth.
+
+
+---
 title: "Applying filters to lists "
 files:
   - action: close
@@ -407,77 +616,3 @@ The output should be exactly same.
 >
 > It is, of course, possible to do this with a loop, but Python here provides
 > are more efficient and easier to read way of accomplishing the same thing.
-
----
-title: Data Types
-files: []
-
----
-Every variable has a given data type. The most common data types are:
-
-- **String** - Text made up of numbers, letters and characters.
-- **Integer** - Whole numbers. (e.g. 1, 78, 0 and -54)
-- **Float** - Decimal numbers (e.g. 3.5683, 98.74634, -6.3). Float comes under the umbrella of what we often refer to as Real numbers.
-- **Boolean** - True or False
-
-In some languages we have to tell the computer what data type a variable is going to be. Python, on the other hand, is able to decide the data type of the variable according to what value it is first given (or to use the correct term what it is initialised with). This can cause problems when we try to do something with the wrong data type.
-
-## Task A
-Copy and run the following program.
-
-```python
-a=input('Enter number 1:')
-b=input('Enter number 2:')
-c=a+b
-print('Adding your numbers together gives:'+c)
-```
-
-If you enter the numbers `5` and `4` it will output `54`. This is because Python treats anything received through the input function as a string. We need to tell Python we want to convert this string to an integer before putting it into the variable. This is done using type casting.
-
-To cast data to an integer we use int()
-
-Try the program now:
-
-```python
-a = int(input('Enter number 1:'))
-b = int(input('Enter number 2:'))
-c=a+b
-print('Adding your numbers together gives:'+c)
-```
-
-This time you will get an error in line 4: `TypeError: Can't convert 'int' object to str implicitly`.
-
-This is because a and b are now integers as they take in strings converted to integers. This means c is now an integer (as it takes in the sum of to integers which in itself is an integer). 
-
-The problem arises when we then try and add c to a sentence: ‘Adding your numbers together gives:’ We can concatenate strings with strings but in Python we can’t concatenate strings with integers.
-
-The solution is to cast c back to a string when we use it using str().
-
-```python
-a = int(input('Enter number 1:'))
-b = int(input('Enter number 2:'))
-c=a+b
-print('Adding your numbers together gives:'+str(c))
-```
-
-Now the program should work.
-
-
-## Task B
-Write a program that asks for a length and width and outputs the area of a rectangle.
-
-E.g.
-
-```bash
-Please enter width:9
-Please enter height:5
-The area is: 45
-```
-
-## Task C
-The formula for the volume of a cylinder is `PI*r*r*h` where r is the radius of the upper surface and h is the height.
-
-Assume that the user may enter the radius and height as real numbers. To cast these you will need to use float() Write a program that asks you for the radius and height of a cylinder then calculates the volume and area.
-
-*HNT: use `math.pi` as a special variable that gives PI.*
-
