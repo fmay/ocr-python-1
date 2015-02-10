@@ -800,6 +800,340 @@ XXXXXX
 ```
 
 ---
+title: Lists
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 11-lists/start.py
+    panel: 0
+layout: ""
+step: 11-lists
+
+---
+If we think of a variable as a box we can think of a list as a collection of boxes containing data. Each “box” has an address starting at 0.
+
+The following code produces a list called names.
+
+```python
+names=['Alf','Betsy','Charlie','David']
+```
+names:
+
+| Alf | Betsy | Charlie | David |
+|-|-|-|-
+| 0 | 1 | 2 | 3 |
+
+We can then access any element of the list by giving its index in square brackets.
+
+```python
+names=['Alf','Betsy','Charlie','David']
+print(names[2])
+```
+
+Will print `Charlie`
+
+We can also alter the contents of the list by referring to the elements by their index.
+
+```python
+names=['Alf','Betsy','Charlie','David']
+names[2]='Bob'
+print(names[2])
+```
+
+Changes the list to:
+
+| Alf | Betsy | Bob | David |
+|-|-|-|-
+| 0 | 1 | 2 | 3 |
+
+
+So it will print `Bob`
+
+If we start off with our list as empty we can create it with just two empty square brackets. `names=[]`
+
+To add entries to the list we then call the append function.
+
+```python
+names=[]
+names.append('Betsy')
+names.append('Anita')
+names.append('Murshed')
+names.append('Hamish')
+print(names)
+```
+
+Will output `['Betsy', 'Anita', 'Murshed', 'Hamish']`
+
+To remove an item from the list we use the pop method if we want to remove by index
+
+```python
+names=[]
+names.append('Betsy')
+names.append('Anita')
+names.append('Murshed')
+names.append('Hamish')
+names.pop(1)
+print(names
+```
+
+Will output `['Betsy', 'Murshed', 'Hamish']`
+
+If we know the item we want to remove we can use the remove function which deletes the first instance of it.
+
+```python
+names=[]
+names.append('Betsy')
+names.append('Anita')
+names.append('Murshed')
+names.append('Hamish')
+names.remove('Anita')
+print(names)
+```
+
+Will also output `['Betsy', 'Murshed', 'Hamish']`
+
+To get the number of items in a list we use len. 
+
+```python
+x=len(names)
+```
+
+Makes `x` the number of names in the list.
+
+We can cycle through a list with a for loop.
+
+```python
+names=['Anita','Betsy', 'Murshed', 'Hamish']
+for i in names:
+  print(i)
+```
+
+to print
+
+```bash
+Anita
+Betsy
+Murshed
+Hamish
+```
+
+## Arrays vs Lists
+Most languages use arrays rather than lists so you may come across the term array being used in a similar context. (Python does have arrays available but lists are much more commonly used.)
+
+The two main differences between the two are:
+
+- Lists can hold different sorts of data whereas an array (usually, depending on the language) only holds one data type.
+- Lists change size as new items are added where as in most languages arrays have their size declared at the start.
+
+## Task A
+Write a program that keeps asking for names until the word `END` is entered at which point it prints out the list of names.
+
+```bash
+Please enter a name: Alfred
+Please enter a name: Bradley
+Please enter a name: Connor
+Please enter a name: David
+Please enter a name: Emily
+Please enter a name: END
+You have entered 5 names.
+['Alfred', 'Bradley', 'Connor', 'David', 'Emily'] 
+```
+
+Keep your code safe for this answer you will need it in Task B.
+
+
+## Task B
+Write a program that asks the user to enter 5 names which it stores in a list. Next, get it to pick one of these names at random and declare that person as the winner. 
+
+*HINT: you will need to generate random numbers as in Task 9c*
+
+E.g.
+
+```bash
+Please enter name 1:
+Sarah
+Please enter name 2:
+Nathan
+Please enter name 3:
+Aniela
+Please enter name 4:
+Safiya
+Please enter name 5:
+Bob
+Well Done Bob you are the winner!
+```
+
+## Task C
+Adapt your program from 11a so it takes in a list of names but prints the out in the opposite order to which they were entered.
+
+```bash
+Please enter a name: Alfred
+Please enter a name: Bradley
+Please enter a name: Connor
+Please enter a name: David
+Please enter a name: Emily
+Please enter a name: END
+You have entered 5 names. These are, in reverse order:
+Emily
+David
+Connor
+Bradley
+Alfred
+```
+
+---
+title: String handling
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 12-strings/start.py
+    panel: 0
+layout: ""
+step: 12-strings
+
+---
+A *string* is a set of characters strung together, so `a`, `hello`, `hello world`, 'ABC&^%def' or even `jkh askjha skja s`.
+
+Often we want to perform operations on strings. This may involve cycling through letters in the string. This is particularly easy in Python as we can do it in a for loop.
+
+## Task A
+Copy and run the following program.
+
+```python
+sentence = 'The cat sat on the mat.'
+for letter in sentence:
+    print(letter)
+```
+
+Sometimes we might just want part of the string. We can do this by treating the string as a list of characters.
+
+|S|a|n|d|w|i|c|h|
+|-|-|-|-|-|-|-|-|
+|0|1|2|3|4|5|6|7|
+
+We can then refer to letters by their index (remembering that a list starts at index 0). So,
+
+```python
+text='Sandwich' print(text[2])
+```
+
+will output the letter `n`.
+
+If you want a group of letters this is done using the following notation.
+
+```bash
+Stringname[position of first letter:position after last letter]
+```
+
+So
+
+```python
+text= 'Sandwich'
+print(text[0:4])
+```
+
+produces `Sand`
+
+and
+
+```python
+text= 'Sandwich'
+print(text[1:5])
+```
+
+produces `andw`
+
+If we want the length of a string we use len just like we did with lists. So:
+
+```python
+text= 'Sandwich'
+a=len(text)
+print(a)
+```
+
+outputs
+
+`8`
+
+￼## Task B
+Change the previous program so it counts the number of occurrences of the lowercase letter a.
+
+## Task C
+Write a program that takes in a word and says whether or not it is a palindrome. A palindrome is a word that is the same backwards as forwards like noon and radar.
+
+## Specimen Exercise
+A good exercise to test your understanding of string handling is the password strength exercise in the Specimen A453 tasks.
+
+Design, code test and evaluate a system to accept and test a password for certain characteristics.
+
+- It should be at least 6, and no more than 12 characters long
+- The system must indicate that the password has failed and why, asking the user to re enter their choice until a successful password is entered.
+- A message to indicate that the password is acceptable must be displayed.
+- Password strength can be assessed against simple criteria to assess its suitability; for example a password system using only upper and lower case alphabetical characters and numeric characters could assess the password strength as:
+    WEAK if only one type used, eg all lower case or all numeric MEDIUM if two types are used
+    STRONG if all three types are used.
+
+For example
+
+  hilltop, 123471324, HAHGFD are all WEAK
+  catman3 and 123456t are MEDIUM 
+  and RTH34gd is STRONG
+    
+A message to indicate the password strength should be displayed after an acceptable password is chosen.
+
+It would be excellent practice to give this a go. On the next page is one version of what the solution could look like in Python.
+
+## Worked Password Example
+**NB** This is just the code section. To score full marks in A453 you would need design, testing and evaluation as appropriate.
+
+```python
+#Program to assess strength of password
+#Ask for password until one of correct length is entered
+passwordValid=False
+while passwordValid==False:
+    password=input('Please enter your password ')
+    if len(password)<6:
+        print('Password too short - must be 6 or more characters')
+    elif len(password)>12:
+        print('Password too long - must be 12 or fewer
+characters')
+    else:
+        print('Password Accepted')
+        passwordValid=True
+        
+#Cycle through the password character by character counting
+#the number of each 'type' of character.
+lowerCount=0
+upperCount=0
+numberCount=0
+for letter in password:
+    if letter>='a' and letter<='z':
+        lowerCount=lowerCount+1
+    elif letter>='A' and letter<='Z':
+        upperCount=upperCount+1
+    elif letter>='0' and letter<='9':
+        numberCount=numberCount+1
+        
+#Count up the types of character
+typesOfChar=0
+if lowerCount>0:
+    typesOfChar=typesOfChar+1
+if upperCount>0:
+    typesOfChar=typesOfChar+1
+if numberCount>0:
+    typesOfChar=typesOfChar+1
+    
+#Print out the strength of the password
+if typesOfChar==1:
+    print('This is a WEAK password')
+elif typesOfChar==2:
+    print('This is a MEDIUM password')
+else:
+    print('This is a STRONG password')
+```
+---
 title: "Applying filters to lists "
 files:
   - action: close
@@ -930,185 +1264,3 @@ The output should be exactly same.
 >
 > It is, of course, possible to do this with a loop, but Python here provides
 > are more efficient and easier to read way of accomplishing the same thing.
-
----
-title: Lists
-files:
-  - action: close
-    path: "#tabs"
-  - action: open
-    path: 11-lists/start.py
-    panel: 0
-layout: ""
-step: 11-lists
-
----
-If we think of a variable as a box we can think of a list as a collection of boxes containing data. Each “box” has an address starting at 0.
-
-The following code produces a list called names.
-
-```python
-names=['Alf','Betsy','Charlie','David']
-```
-names:
-
-| Alf | Betsy | Charlie | David |
-|-|-|-|-
-| 0 | 1 | 2 | 3 |
-
-We can then access any element of the list by giving its index in square brackets.
-
-```python
-names=['Alf','Betsy','Charlie','David']
-print(names[2])
-```
-
-Will print `Charlie`
-
-We can also alter the contents of the list by referring to the elements by their index.
-
-```python
-names=['Alf','Betsy','Charlie','David']
-names[2]='Bob'
-print(names[2])
-```
-
-Changes the list to:
-
-| Alf | Betsy | Bob | David |
-|-|-|-|-
-| 0 | 1 | 2 | 3 |
-
-
-So it will print `Bob`
-
-If we start off with our list as empty we can create it with just two empty square brackets. `names=[]`
-
-To add entries to the list we then call the append function.
-
-```python
-names=[]
-names.append('Betsy')
-names.append('Anita')
-names.append('Murshed')
-names.append('Hamish')
-print(names)
-```
-
-Will output `['Betsy', 'Anita', 'Murshed', 'Hamish']`
-
-To remove an item from the list we use the pop method if we want to remove by index
-
-```python
-names=[]
-names.append('Betsy')
-names.append('Anita')
-names.append('Murshed')
-names.append('Hamish')
-names.pop(1)
-print(names
-```
-
-Will output `['Betsy', 'Murshed', 'Hamish']`
-
-If we know the item we want to remove we can use the remove function which deletes the first instance of it.
-
-```python
-names=[]
-names.append('Betsy')
-names.append('Anita')
-names.append('Murshed')
-names.append('Hamish')
-names.remove('Anita')
-print(names)
-```
-
-Will also output `['Betsy', 'Murshed', 'Hamish']`
-
-To get the number of items in a list we use len. 
-
-```python
-x=len(names)
-```
-
-Makes x the number of names in the list.
-
-We can cycle through a list with a for loop.
-
-```python
-names=['Anita','Betsy', 'Murshed', 'Hamish']
-for i in names:
-  print(i)
-```
-
-to print
-
-```bash
-Anita
-Betsy
-Murshed
-Hamish
-```
-
-## Arrays vs Lists
-Most languages use arrays rather than lists so you may come across the term array being used in a similar context. (Python does have arrays available but lists are much more commonly used.)
-
-The two main differences between the two are:
-
-- Lists can hold different sorts of data whereas an array (usually, depending on the language) only holds one data type.
-- Lists change size as new items are added where as in most languages arrays have their size declared at the start.
-
-## Task A
-Write a program that keeps asking for names until the word END is entered at which point it prints out the list of names.
-
-```bash
-Please enter a name: Alfred
-Please enter a name: Bradley
-Please enter a name: Connor
-Please enter a name: David
-Please enter a name: Emily
-Please enter a name: END
-You have entered 5 names.
-['Alfred', 'Bradley', 'Connor', 'David', 'Emily'] 
-
-Keep your code safe for this answer you will need it in Task B.
-```
-
-## Task B
-Write a program that asks the user to enter 5 names which it stores in a list. Next, get it to pick one of these names at random and declare that person as the winner. 
-
-*HINT: you will need to generate random numbers as in Task 9c*
-
-E.g.
-
-```bash
-Please enter name 1:
-Sarah
-Please enter name 2:
-Nathan
-Please enter name 3:
-Aniela
-Please enter name 4:
-Safiya
-Please enter name 5:
-Bob
-Well Done Bob you are the winner!
-```
-
-## Task C
-Adapt your program from 11a so it takes in a list of names but prints the out in the opposite order to which they were entered.
-
-```bash
-Please enter a name: Alfred
-Please enter a name: Bradley
-Please enter a name: Connor
-Please enter a name: David
-Please enter a name: Emily
-Please enter a name: END
-You have entered 5 names. These are, in reverse order:
-Emily
-David
-Connor
-Bradley
-Alfred
-```
