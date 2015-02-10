@@ -251,16 +251,12 @@ layout: ""
 step: 4-lists
 
 ---
-The ability to filter lists is very important. Consider a program that is creating
-a prefect rota. From the list of potential prefects, the program will have to exclude
-all who are already engaged at a particular time slot, leaving the list of possible
+The ability to filter lists is very important. Consider a program that is creating a prefect rota. From the list of potential prefects, the program will have to exclude all who are already engaged at a particular time slot, leaving the list of possible
 candidates.
 
 ## Task 2.5.1a:
 
-The code in [start_2_5_1_a.py](open_file "4-lists/start_2_5_1_a.py")
-will take the just-in-time created list of numbers `0-9` and
-filter it to only those over `5` using an appropriately called `function:`
+The code in [start_2_5_1_a.py](open_file "4-lists/start_2_5_1_a.py") will take the just-in-time created list of numbers `0-9` and filter it to only those over `5` using an appropriately called `function:`
 
 Copy and execute this program, supplying comments where necessary.
 
@@ -374,3 +370,51 @@ The output should be exactly same.
 >
 > It is, of course, possible to do this with a loop, but Python here provides
 > are more efficient and easier to read way of accomplishing the same thing.
+
+---
+title: Calculations
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 4-calculations/start.py
+    panel: 0
+layout: ""
+step: 4-calculations
+
+---
+We can carry out calculations in Python. The arithmetic operators we use to do this are: 
+
+- `+` addition
+- `-` subtraction
+- `*` multiplication
+- `/` division
+
+## Task A
+Copy and run the following program
+
+```python
+print(1+6)
+print(7-5)
+print(3*9)
+print(7/2)
+```
+
+## Task B
+Try changing the calculations to new ones. We can put the results of calculations into variables. These variables will not be string but integer (whole numbers) or float (decimal).
+
+```python
+a=10
+b=2
+c=a/b
+print(c)
+```
+
+## Task C
+Complete this program so it uses addition on the two variables to print the number 15
+
+```python
+a=7
+b=8
+c= [REMAINDER OF PROGRAM HERE]
+```
