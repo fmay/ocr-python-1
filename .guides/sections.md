@@ -223,6 +223,7 @@ I love visiting London
 
 ## Task 3b
 Write a program that asks for your first name then asks for your last name and finally greets you with your full name.
+
 e.g.
 ```bash
 What is your first name? John
@@ -232,6 +233,7 @@ Hello John Smith
 
 ## Task 3c
 Write a program that asks for your name then prints it out 5 times
+
 e.g.
 ```bash
 What is your name? Trevor
@@ -242,8 +244,11 @@ title: "Applying filters to lists "
 files:
   - action: close
     path: "#tabs"
+  - action: open
+    path: 4-lists/start_2_5_1_a.py
+    panel: 0
 layout: ""
-step: lesson04
+step: 4-lists
 
 ---
 The ability to filter lists is very important. Consider a program that is creating
@@ -253,9 +258,10 @@ candidates.
 
 ## Task 2.5.1a:
 
-The code in [start_2_5_1_a.py](open_file "lesson04/start_2_5_1_a.py")
+The code in [start_2_5_1_a.py](open_file "4-lists/start_2_5_1_a.py")
 will take the just-in-time created list of numbers `0-9` and
-filter it to only those over `5` using an appropriately called function:
+filter it to only those over `5` using an appropriately called `function:`
+
 Copy and execute this program, supplying comments where necessary.
 
 
@@ -266,8 +272,7 @@ Copy and execute this program, supplying comments where necessary.
 
 ## Task 2.5.1b
 
-There is more than one way to filter lists and different people end up preferring
-different types. Replace the line
+There is more than one way to filter lists and different people end up preferring different types. Replace the line
 
 ```python
 filtered_li = [x for x in li if over_five(x)]
@@ -280,8 +285,8 @@ filtered_li = list(filter(over_five,li))
 ```
 
 We are now making use of the built-in Python function to filter lists.
-However, this function is being depreciated (its use is discouraged), so make 
-sure you know the other methods, as well.
+
+However, this function is being depreciated (its use is discouraged), so make sure you know the other methods, as well.
 
 ## Task 2.5.1c
 
@@ -291,18 +296,13 @@ Now replace the line with
 filtered_li = [x for x in li if x > 5]
 ```
 
-Here, we actually simplified our code, instead of a function which is more
-flexible and efficient, we are checking the condition (`> 5`) in the filtering
-statement itself. If the first two methods were too complicated, this is the one to use.
+Here, we actually simplified our code, instead of a function which is more flexible and efficient, we are checking the condition (`> 5`) in the filtering statement itself. If the first two methods were too complicated, this is the one to use.
 
-You should see no difference in output, they are all equivalent. Can you
-comment on their readability and easy of understanding – which option do you like more?
+You should see no difference in output, they are all equivalent. Can you comment on their readability and easy of understanding – which option do you like more?
 
-You can read [here](http://www.artima.com/weblogs/viewpost.jsp?thread=98196) what Python’s inventor
-has to say about this.
+You can read [here](http://www.artima.com/weblogs/viewpost.jsp?thread=98196) what Python’s inventor has to say about this.
 
-There is another commonly used list function called `map`. It runs a specified 
-function on every list item.
+There is another commonly used list function called `map`. It runs a specified function on every list item.
 
 ### Task 2.5.1d
 
@@ -324,8 +324,7 @@ filtered_li = list(map(over_five,li))
 ```
 
 **Q:** What did the mapping do?
-**A:** It replaced the list item with the value of thee function in which that list item
-was an input.
+**A:** It replaced the list item with the value of thee function in which that list item was an input.
 
 ## Task 2.5.1e
 
