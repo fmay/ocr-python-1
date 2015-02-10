@@ -930,3 +930,185 @@ The output should be exactly same.
 >
 > It is, of course, possible to do this with a loop, but Python here provides
 > are more efficient and easier to read way of accomplishing the same thing.
+
+---
+title: Lists
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 11-lists/start.py
+    panel: 0
+layout: ""
+step: 11-lists
+
+---
+If we think of a variable as a box we can think of a list as a collection of boxes containing data. Each “box” has an address starting at 0.
+
+The following code produces a list called names.
+
+```python
+names=['Alf','Betsy','Charlie','David']
+```
+names:
+
+| Alf | Betsy | Charlie | David |
+|-|-|-|-
+| 0 | 1 | 2 | 3 |
+
+We can then access any element of the list by giving its index in square brackets.
+
+```python
+names=['Alf','Betsy','Charlie','David']
+print(names[2])
+```
+
+Will print `Charlie`
+
+We can also alter the contents of the list by referring to the elements by their index.
+
+```python
+names=['Alf','Betsy','Charlie','David']
+names[2]='Bob'
+print(names[2])
+```
+
+Changes the list to:
+
+| Alf | Betsy | Bob | David |
+|-|-|-|-
+| 0 | 1 | 2 | 3 |
+
+
+So it will print `Bob`
+
+If we start off with our list as empty we can create it with just two empty square brackets. `names=[]`
+
+To add entries to the list we then call the append function.
+
+```python
+names=[]
+names.append('Betsy')
+names.append('Anita')
+names.append('Murshed')
+names.append('Hamish')
+print(names)
+```
+
+Will output `['Betsy', 'Anita', 'Murshed', 'Hamish']`
+
+To remove an item from the list we use the pop method if we want to remove by index
+
+```python
+names=[]
+names.append('Betsy')
+names.append('Anita')
+names.append('Murshed')
+names.append('Hamish')
+names.pop(1)
+print(names
+```
+
+Will output `['Betsy', 'Murshed', 'Hamish']`
+
+If we know the item we want to remove we can use the remove function which deletes the first instance of it.
+
+```python
+names=[]
+names.append('Betsy')
+names.append('Anita')
+names.append('Murshed')
+names.append('Hamish')
+names.remove('Anita')
+print(names)
+```
+
+Will also output `['Betsy', 'Murshed', 'Hamish']`
+
+To get the number of items in a list we use len. 
+
+```python
+x=len(names)
+```
+
+Makes x the number of names in the list.
+
+We can cycle through a list with a for loop.
+
+```python
+names=['Anita','Betsy', 'Murshed', 'Hamish']
+for i in names:
+  print(i)
+```
+
+to print
+
+```bash
+Anita
+Betsy
+Murshed
+Hamish
+```
+
+## Arrays vs Lists
+Most languages use arrays rather than lists so you may come across the term array being used in a similar context. (Python does have arrays available but lists are much more commonly used.)
+
+The two main differences between the two are:
+
+- Lists can hold different sorts of data whereas an array (usually, depending on the language) only holds one data type.
+- Lists change size as new items are added where as in most languages arrays have their size declared at the start.
+
+## Task A
+Write a program that keeps asking for names until the word END is entered at which point it prints out the list of names.
+
+```bash
+Please enter a name: Alfred
+Please enter a name: Bradley
+Please enter a name: Connor
+Please enter a name: David
+Please enter a name: Emily
+Please enter a name: END
+You have entered 5 names.
+['Alfred', 'Bradley', 'Connor', 'David', 'Emily'] 
+
+Keep your code safe for this answer you will need it in Task B.
+```
+
+## Task B
+Write a program that asks the user to enter 5 names which it stores in a list. Next, get it to pick one of these names at random and declare that person as the winner. 
+
+*HINT: you will need to generate random numbers as in Task 9c*
+
+E.g.
+
+```bash
+Please enter name 1:
+Sarah
+Please enter name 2:
+Nathan
+Please enter name 3:
+Aniela
+Please enter name 4:
+Safiya
+Please enter name 5:
+Bob
+Well Done Bob you are the winner!
+```
+
+## Task C
+Adapt your program from 11a so it takes in a list of names but prints the out in the opposite order to which they were entered.
+
+```bash
+Please enter a name: Alfred
+Please enter a name: Bradley
+Please enter a name: Connor
+Please enter a name: David
+Please enter a name: Emily
+Please enter a name: END
+You have entered 5 names. These are, in reverse order:
+Emily
+David
+Connor
+Bradley
+Alfred
+```
