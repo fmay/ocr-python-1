@@ -68,7 +68,8 @@ You will hopefully see the message `Hello World!`.
 
 ### Task B
 
-Change the program so it says `Pleased to meet you.``
+Change the program so it says `Pleased to meet you.`. 
+
 
 ### Task C
 
@@ -80,6 +81,8 @@ a computer program
 that prints on several lines
 ```
 
+*Hint: use more than one print() command.*
+
 ### Challenge
 
 Write a program to say
@@ -88,27 +91,42 @@ Write a program to say
 This is John's first program
 ```
 
-The apostrophe makes this trickier than it first may seem (Hint: Find out about escape
-characters in Python).
+The apostrophe makes this trickier than it first may seem
+*Hint: Use Google to find out about escape characters in Python
+
 ---
 title: Storing data in variables
 files:
   - action: close
     path: "#tabs"
   - action: open
+    path: 2-variables/complete-me.py
+    panel: 0
+    index: 0
+    type: file
+    arg: 2-variables/complete-me.py
+  - action: open
+    path: 2-variables/cat-mat.py
+    panel: 0
+    index: 1
+    type: file
+    arg: 2-variables/cat-mat.py
+  - action: open
     path: 2-variables/start.py
     panel: 0
+    index: 2
+    type: file
+    arg: 2-variables/start.py
 layout: ""
 step: 2-variables
 
 ---
-We use variables in our programs to store data. Each variable has a name and stores data
-of a certain type (string, integer, real etc). In Python we do now have to explicitly state
-the data type being stored it will work this out for itself when the variable is first used.
-In this section we will just use string variables. String is just the programming term for text
-(i.e. letters, numbers and symbols).
+We use variables in our programs to store data. Each variable has a name and stores data of a certain type (string, integer, real etc). In Python we do now have to explicitly state the data type being stored it will work this out for itself when the variable is first used.
 
-Variable names can contain letters and numbers but should always start with a letter.
+In this section we will just use string variables. String is just the programming term for text (i.e. letters, numbers and symbols).
+
+Variable names can contain letters and numbers but should always start with a letter. 
+
 We assign a value to a variable using `=`
 
 ## Task A
@@ -122,7 +140,7 @@ print('Hello ' + name)
 
 ## Task B
 
-Look at the file [start_b.py](open_file "lesson03/start_b.py").
+Look at the file [complete-me.py](open_file "2-variables/complete-me.py").
 
 Complete the program so it uses the variable language to print
 
@@ -139,6 +157,7 @@ print('Hello ' + name)
 ```
 
 Will print `Hello Liz` (as the variable name has been overwritten with the value Liz).
+
 We can also change the contents of a variable referring to itself:
 
 ```python
@@ -157,8 +176,6 @@ print('Hello ' + name)
 
 will print `Hello BobBob`.
 
-### Python Programming for GCSE Computing
-
 We can add spaces just like any other letter:
 
 ```python
@@ -170,15 +187,22 @@ print('Hello ' + name)
 Will print `Hello Bob Bob``
 
 ## Task C
-Complete the program in [start_c.py](open_file "lesson03/start_c.py"), so
-it uses the variables to print out `the cat sat on the mat`. Remember you
-will need to add spaces.
+Complete the program in [cat-mat.py](open_file "2-variables/cat-mat.py"), so it uses the variables to print out `the cat sat on the mat`. 
+
+Remember, you will need to add spaces.
 
 
 
 ---
 title: Inputting Data
-files: []
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 3-input/start.py
+    panel: 0
+layout: ""
+step: 3-input
 
 ---
 We can now look at starting to make our programs interactive. We are going to take in input from the user using the input command.
