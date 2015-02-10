@@ -800,3 +800,128 @@ The output should be exactly same.
 >
 > It is, of course, possible to do this with a loop, but Python here provides
 > are more efficient and easier to read way of accomplishing the same thing.
+
+---
+title: Procedures and Functions
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 10-subs-functions/start.py
+    panel: 0
+layout: ""
+step: 10-subs-functions
+
+---
+It is possible to write a whole program as one big block but where possible we want to break it down into subroutines. There are several advantages to this:
+
+- The program becomes easier to read.
+- The program becomes easier to test. If you have tested a subroutine you don’t have to worry about it when you subsequently use it.
+- Subroutines can often be reused meaning code does not need to be rewritten.
+
+We will start off with a function that prints out This is my subroutine 3 times. Note how the subroutines come before the main program.
+
+```python
+#Subroutine that prints out sentence 3 times
+def myFirstSubroutine():
+    for i in range(1,3):
+        print('This is a subroutine')
+#Main Program
+print('Start of main program')
+myFirstSubroutine()
+print('End of program')
+```
+
+This would output:
+
+```bash
+Start of main program
+This is a subroutine
+This is a subroutine
+This is a subroutine
+End of program
+```
+
+We can use parameters to make subroutines even more useful. The parameters in the subroutine below are text and times.
+
+```python
+#Subroutine that prints out sentence 3 times
+def myFirstSubroutine(text, times):
+    for i in range(0,times):
+        print(text)
+#Main Program
+print('Start of main program')
+myFirstSubroutine('Sample text',5)
+print('End of program')
+```
+The subroutines we have looked at so far are procedures. The other type of subroutine we use is a function. A function is a subroutine that returns a value. That means we can use it within other statements. We use the return keyword to send the value back to the main program.
+
+```python
+#Function to double a number
+def double(number):
+    twicenum=2*number
+    return twicenum
+#Main Program
+a=6
+print('Double a is')
+print(double(6))
+```
+
+## Task A
+Write a function called `circleArea` that takes in a float representing the radius and returns the area of a circle.
+
+(Area of a circle is PI*r^2￼ ￼ where r is the radius)
+
+Call your function from this main program:
+```python
+print(circleArea(1.0))
+print(circleArea(2.0))
+print(circleArea(3.0))
+```
+
+## Task B
+Write a function called journeyCost. It should take in the number of miles of the journey, price per litre of fuel in pence and how many miles it a car travels to the litre. It should return the journey price in pounds.
+
+i.e.
+
+```python
+journeyCost(miles, pricePerLitre, milesPerLitre)
+so
+print(journeyCost(50, 140, 7))
+Would output
+9.99
+```
+
+## Task C
+Write a function called rectangle that takes in a width and length. This should print out a rectangle of Xs using those dimensions. (NB as the character X is higher than it is wide the dimensions will not be perfectly to scale.)
+e.g.
+```
+The program
+
+```python
+rectangle(5,3)
+```
+
+will output
+
+```bash
+XXXXX
+XXXXX
+XXXXX
+```
+and
+
+```python
+rectangle(3,2)
+rectangle(6,3)
+```
+
+will output
+
+```bash
+XXX
+XXX
+XXXXXX
+XXXXXX
+XXXXXX
+```
