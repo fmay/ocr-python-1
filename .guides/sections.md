@@ -494,6 +494,182 @@ Write a program that asks for a mark and then says what grade it is worth.
 
 
 ---
+title: Code readability
+files:
+  - action: close
+    path: "#tabs"
+layout: ""
+step: 7-readability
+
+---
+In the last section we looked at indentation as a way of making your code easier to read. In the development section of A453 one of the descriptors for the top mark band is:
+
+*“The code will be well organised with meaningful variable names and detailed annotation indicating the function of each section.”*
+
+Annotation in your code would usually be in the form of commenting. A comment is purely for the person reading it. The computer completely ignores comments but they make your program much more understandable to anyone trying to follow your code. The key to good commenting is to assume the reader is a competent programmer but doesn’t know what your program is meant to do. There is a fine art to being able to strike the right balance between under and over commenting.
+
+Commenting in Python is done using the hash # character. A comment can be put at the end of a line or on a line by itself.
+
+```python
+#Question to ask user the capital of France
+print('What is the capital of France?')
+if city== 'Paris':
+     print('Well done')
+elif city=='Lyon': #Handle common wrong answer
+     print('Right country, wrong city')
+elif city=='F':
+     print('Terrible joke and wrong answer.')
+else: #any other wrong answer.
+     print('Sorry wrong answer')
+```
+
+## Variable Names
+The final thing you should consider are your variable names. a, b and c are fine in trivial 4 line programs but as your programs get bigger this becomes quickly confusing. 
+
+Meaningful variable names help make your code much more readable.
+
+
+---
+title: Loops
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 8-iteration1/start.py
+    panel: 0
+layout: ""
+step: 8-iteration1
+
+---
+One of the things that makes computers so useful is the speed at which they do things. This means we can get them to do something over and over again. We call this iteration or looping. We will look at two types of loop, the first of which is a count controlled loop. This is when a program carries out a set of instructions a certain number of times. To do a count controlled loop we use for. Note how anything inside the loop is indented.
+
+```python
+for i in range(0,5):
+     print('looping')
+```
+
+Will output
+
+```bash
+looping
+looping
+looping
+looping
+looping
+```
+
+In the loop for `i in range(x,y)` x is the starting value of i and y is the one above what it will get to. So above it runs with i equal to 0,1,2,3 and 4.
+
+Traditionally loops tend to use the variables i,j and k and you may see lots of code that conforms to this convention. There is, however, no reason why you can’t use any other variable name especially if it makes your code more readable.
+
+## Task A
+Write a program that outputs the word computing 15 times. We can use the variable i inside the loop.
+
+```python
+for i in range(0,5):
+    print(str(i)+' looping')
+```
+
+Produces the followin output
+
+```bash
+0 looping
+1 looping
+2 looping
+3 looping
+4 looping
+```
+
+## Task B
+Write a program that takes in a letter and number then, using a for loop, prints out that letter that many times.
+
+E.g.
+```bash
+Please enter a letter: T
+Please enter a number: 6
+TTTTTT
+```
+
+## Task C
+Write a program that asks for a number then outputs it’s 10 times table.
+E.g.
+
+```bash
+Please enter a number: 7
+1 times 7 is 7
+2 times 7 is 14
+3 times 7 is 21
+4 times 7 is 28
+5 times 7 is 35
+6 times 7 is 42
+7 times 7 is 49
+8 times 7 is 56
+9 times 7 is 63
+10 times 7 is 70
+```
+
+
+---
+title: Conditional Loops
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 9-iteration2/start.py
+    panel: 0
+layout: ""
+step: 9-iteration2
+
+---
+We have looked at count controlled loops, we will now look at condition controlled loops. These are loops which continue to repeat code while a condition is true.
+
+These are exactly the same type of conditions we looked at when using `if`
+
+```python
+x=0
+while x<5:
+     print('looping')
+```
+
+If we run the above code (don’t) you will find it goes on forever printing looping. that is because x remains 0 and so is always less than 5. Let’s fix it:
+
+```python
+x=0
+while x<5:
+     print('looping')
+     x=x+1
+```
+Now try running the above code.
+
+## Task A
+Write a program that asks for a password and keeps asking until the correct password, `apple` is entered and then says `Accepted`
+
+## Task B
+The sequence 1,4,9,16,25 is made up of square numbers (i.e.1=1^2, 4 = 2^2, 9=3^2 etc.). Write a program that writes out all the square numbers under 5000.
+
+## Task C
+The following code will create an integer x that is a random number between 1 and 100.
+
+```python
+import random
+x=random.randint(1,100)
+```
+
+The line import random has to be put at the very top of the program you can use random.randint(1,100) wherever you want after that.
+
+Write a program in which the computer thinks of a number between 1 and 100 (i.e. picks number at random). It should then ask the user to guess what number it is thinking of. It should then say whether the number the computer is thinking of is higher or lower than the one guessed. If the user guess correctly it should say well done and say how many guesses it took them if not it asks them to guess again.
+
+```bash
+I am thinking of a number between 1-100.  Can you guess what it is? 50
+No, the number I am thinking of is higher than 50.  Can you guess what it is? 80
+No, the number I am thinking of is lower than 80.  Can you guess what it is? 60
+No, the number I am thinking of is higher than 60.  Can you guess what it is? 64
+Well done! The answer was 64 and you found it in 4 guesses.
+
+```
+
+
+---
 title: "Applying filters to lists "
 files:
   - action: close
@@ -624,125 +800,3 @@ The output should be exactly same.
 >
 > It is, of course, possible to do this with a loop, but Python here provides
 > are more efficient and easier to read way of accomplishing the same thing.
-
----
-title: Loops
-files:
-  - action: close
-    path: "#tabs"
-  - action: open
-    path: 8-iteration1/start.py
-    panel: 0
-layout: ""
-step: 8-iteration1
-
----
-One of the things that makes computers so useful is the speed at which they do things. This means we can get them to do something over and over again. We call this iteration or looping. We will look at two types of loop, the first of which is a count controlled loop. This is when a program carries out a set of instructions a certain number of times. To do a count controlled loop we use for. Note how anything inside the loop is indented.
-
-```python
-for i in range(0,5):
-     print('looping')
-```
-
-Will output
-
-```bash
-looping
-looping
-looping
-looping
-looping
-```
-
-In the loop for `i in range(x,y)` x is the starting value of i and y is the one above what it will get to. So above it runs with i equal to 0,1,2,3 and 4.
-
-Traditionally loops tend to use the variables i,j and k and you may see lots of code that conforms to this convention. There is, however, no reason why you can’t use any other variable name especially if it makes your code more readable.
-
-## Task A
-Write a program that outputs the word computing 15 times. We can use the variable i inside the loop.
-
-```python
-for i in range(0,5):
-    print(str(i)+' looping')
-```
-
-Produces the followin output
-
-```bash
-0 looping
-1 looping
-2 looping
-3 looping
-4 looping
-```
-
-## Task B
-Write a program that takes in a letter and number then, using a for loop, prints out that letter that many times.
-
-E.g.
-```bash
-Please enter a letter: T
-Please enter a number: 6
-TTTTTT
-```
-
-## Task C
-Write a program that asks for a number then outputs it’s 10 times table.
-E.g.
-
-```bash
-Please enter a number: 7
-1 times 7 is 7
-2 times 7 is 14
-3 times 7 is 21
-4 times 7 is 28
-5 times 7 is 35
-6 times 7 is 42
-7 times 7 is 49
-8 times 7 is 56
-9 times 7 is 63
-10 times 7 is 70
-```
-
-
----
-title: Code readability
-files:
-  - action: close
-    path: "#tabs"
-layout: ""
-step: 7-readability
-
----
-In the last section we looked at indentation as a way of making your code easier to read. In the development section of A453 one of the descriptors for the top mark band is:
-
-*“The code will be well organised with meaningful variable names and detailed annotation indicating the function of each section.”*
-
-Annotation in your code would usually be in the form of commenting. A comment is purely for the person reading it. The computer completely ignores comments but they make your program much more understandable to anyone trying to follow your code. The key to good commenting is to assume the reader is a competent programmer but doesn’t know what your program is meant to do. There is a fine art to being able to strike the right balance between under and over commenting.
-
-Commenting in Python is done using the hash # character. A comment can be put at the end of a line or on a line by itself.
-
-```python
-#Question to ask user the capital of France
-print('What is the capital of France?')
-if city== 'Paris':
-     print('Well done')
-elif city=='Lyon': #Handle common wrong answer
-     print('Right country, wrong city')
-elif city=='F':
-     print('Terrible joke and wrong answer.')
-else: #any other wrong answer.
-     print('Sorry wrong answer')
-```
-
-## Variable Names
-The final thing you should consider are your variable names. a, b and c are fine in trivial 4 line programs but as your programs get bigger this becomes quickly confusing. 
-
-Meaningful variable names help make your code much more readable.
-
-
----
-title: New Section 11
-files: []
-
----
