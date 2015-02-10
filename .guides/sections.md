@@ -1158,7 +1158,7 @@ myFile.close()
 
 Copy and run this code. If you look in the same directory where you saved your program you should now see the file example.txt. When writing to a file Python creates it if it does not yet exist.
 
-If we want multiple lines we can use the \n newline escape sequence.
+If we want multiple lines we can use the `\n` newline escape sequence.
 
 ```python
 # Write a file
@@ -1254,6 +1254,100 @@ Design, code and test a system to store and manage user names and their highest 
 - locate and update a high score for a user
 
 The system need only cater for 10 items
+
+
+## Challenge Exercises
+These exercises are significantly more challenging than the ones encountered so far. They are a good way of practicing skills you have acquired.
+
+### Challenge Exercise One
+Write a procedure called triangle that takes in a number and then prints out a triangle of that height. so
+
+``python
+triangle(4)
+```
+
+would print out:
+
+```bash
+   *
+  ***
+ *****
+*******
+```
+
+Call your function from this main program:
+
+```python
+triangle(2)
+triangle(3)
+triangle(4)
+```
+
+it should output:
+
+```bash
+   *
+  ***
+   *
+  ***
+ *****
+   *
+  ***
+ *****
+*******
+```
+
+### Challenge Exercise Two
+The Sieve of Eratosthenes is an algorithm to find prime numbers. 
+
+The algorithm goes as follows:
+
+To find all the prime numbers less than or equal to a given integer n by Eratosthenes' method:
+
+1. Create a list of consecutive integers from 2 to n: (2, 3, 4, ..., n).
+2. Initially,letpequal2,thefirstprimenumber.
+3. Starting from p, count up in increments of p and mark each of these numbers greater than p itself in the list. These will be multiples of p: 2p, 3p, 4p, etc.; note that some of them may have already been marked.
+4. Find the first number greater than p in the list that is not marked. If there was no such number, stop. Otherwise, let p now equal this number (which is the next prime), and repeat from step 3.
+
+When the algorithm terminates, all the numbers in the list that are not marked are prime.
+
+To find all the prime numbers less than or equal to 30, proceed as follows. 
+
+First generate a list of integers from 2 to 30:
+
+```bash
+2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+```
+
+First number in the list is 2; cross out every 2nd number in the list after it (by counting up in increments of 2), i.e. all the multiples of 2:
+
+```bash
+ 2  3  5  7  9  11 13 15 17 19 21 23 25 27 29 
+ ```
+ 
+Next number in the list after 2 is 3; cross out every 3rd number in the list after it (by counting up in increments of 3), i.e. all the multiples of 3:
+
+```bash
+ 2  3  5  7  11 13 17 19 23 25 29 
+```
+
+Next number not yet crossed out in the list after 3 is 5; cross out every 5th number in the list after it (by counting up in increments of 5), i.e. all the multiples of 5:
+
+```bash
+ 2  3  5  7  11 13 17 19 23 29 
+```
+
+Next number not yet crossed out in the list after 5 is 7; the next step would be to cross out every 7th number in the list after it, but they are all already crossed out at this point, as these numbers (14, 21, 28) are also multiples of smaller primes because 7*7 is greater than 30. The numbers left not crossed out in the list at this point are all the prime numbers below 30:
+
+```bash
+ 2  3     5     7           11    13          17    19          23                29
+ ```
+ 
+[Look up the Sieve of Eratosthenes](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼Write a program that prints out all the primes below 10,000.
+
+*HINT: you will need to use % which gives the remainder of a division operation. So `x=11%5` would give `1` as 11/5=2 remainder 1*
 ---
 title: "Applying filters to lists "
 files:
