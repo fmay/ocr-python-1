@@ -1134,6 +1134,127 @@ else:
     print('This is a STRONG password')
 ```
 ---
+title: Files
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 13-files/start.py
+    panel: 0
+layout: ""
+step: 13-files
+
+---
+## Writing to Files
+Most real world programs need to be able to read and write data to files. Fortunately Python makes this process extremely easy to do.
+
+To get Python to write to a file we first open it, write what we want to it and finally close it.
+
+```python
+myFile = open('example.txt', 'wt')
+myFile.write('I have written to a file.')
+myFile.close()
+```
+
+Copy and run this code. If you look in the same directory where you saved your program you should now see the file example.txt. When writing to a file Python creates it if it does not yet exist.
+
+If we want multiple lines we can use the \n newline escape sequence.
+
+```python
+# Write a file
+myFile = open('example.txt', 'wt')
+myFile.write('I have written to a file.\nIt now has three
+lines\nThe third being this one')
+myFile.close()
+Alternatively we can use spread it out over several lines (but note we still need the \n)
+
+# Write a file
+myFile = open('example.txt', 'wt')
+myFile.write('I have written to a file.\n')
+myFile.write('It now has three lines.\n')
+myFile.write('The third being this one.\n')
+myFile.close()
+```
+
+## Reading From Files
+Reading from files is equally as straight forward.
+
+Make sure you have run one of the above programs so you have the file `example.txt` containing:
+
+```bash
+I have written to a file.
+It now has three lines.
+The third being this one.
+```
+
+Copy and run the following code:
+
+```python
+myFile = open('example.txt', 'rt')
+contents = myFile.read()
+print(contents)
+myFile.close()
+```
+
+If all has worked the contents of your file should appear in your programming console.
+
+The rt and wt that appear in the open command stand for read text and write text. They tell Python the type of file you are opening and what access you need to it.
+
+Sometimes we want to read a file line at a time. We do this using the readline command. If we want it to read all the lines in the file we can use a while loop. We tell the program to `readline` while we are not reading in an empty line (and so the end of the file). Of course you could, of course, change this to keep reading until it reaches any other string of your choice.
+
+```python
+myFile = open('example.txt', 'rt')
+line = myFile.readline()
+while line!='':
+print(line)
+    line = myFile.readline()
+myFile.close()
+```
+
+An more elegant solution is to use a for loop.
+
+```python
+myFile = open('example.txt', 'rt')
+for line in myFile:
+     print(line)
+myFile.close()
+```
+
+You will notice with both of these options there are blank lines in between each line of text. To prevent this change print(line) to print(line,end='').
+
+**NB** two single quotation marks not one double.
+
+
+## Task A
+Write a program that reads a list of numbers from a file then outputs the average. So if your file contained
+
+```bash
+3 45 83 21
+```
+
+Your program would output: `38`
+
+## Task B
+In Task A of 'Lists' you had to write a program that takes in names and stored them in a list until `END` is entered. 
+
+This time you are going to change it so it stores the names in between times the program is run. Adapt the program so that when it loads it looks for the file names.txt and reads any names into the list. 
+
+The user should then be able to enter new names as before. When END is typed it should output the new list (i.e. loaded names and entered names) then save it to the file `names.txt`.
+
+## Task C
+When you are confident with using read and write why not try the specimen A453 task:
+
+## High scores database
+Design, code and test a system to store and manage user names and their highest score. The system must be able to
+
+- create a file
+- add data to a file
+- locate data in the file by name and their highest score
+- delete an item and its associated data from the file
+- locate and update a high score for a user
+
+The system need only cater for 10 items
+---
 title: "Applying filters to lists "
 files:
   - action: close
