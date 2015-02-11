@@ -558,7 +558,7 @@ It produces the following output
 ## Task 2
 Task file : [task-2.py](open_file "08-iteration1/task-2.py").
 
-Modify the program to takes in a letter and number then, using a `for` loop, prints out that letter that many times.
+Write a program that inputs a letter and a number then, using a `for` loop, prints out that letter that many times.
 
 ```
 Please enter a letter: T
