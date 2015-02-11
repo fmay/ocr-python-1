@@ -939,6 +939,9 @@ files:
   - action: open
     path: 12-strings/play.py
     panel: 0
+    index: 0
+    type: file
+    arg: 12-strings/play.py
 layout: ""
 step: 12-strings
 
@@ -1091,7 +1094,7 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 13-files/start.py
+    path: 13-files/play.py
     panel: 0
 layout: ""
 step: 13-files
