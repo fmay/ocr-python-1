@@ -22,7 +22,7 @@ Remember your trainers will be available to contact after the day itself so plea
 
 ## Python
 
-he OCR GCSE in Computing can be carried out using any (imperative) language. The fact this course is in Python isn’t to say it is any better than the many alternatives out there but it is certainly a good language to teach with.
+The OCR GCSE in Computing can be carried out using any (imperative) language. The fact this course is in Python isn’t to say it is any better than the many alternatives out there but it is certainly a good language to teach with.
 
 Python was designed specifically to be easy to understand and quick to build programs. It is used in real world companies such as Google where its creator Guido Van Rossum worked for a while.
 There are currently two versions of Python in use Python 2 and Python 3. Whilst they are both very similar there are important differences. In this course we will be looking at **Python 3**.
@@ -91,7 +91,7 @@ layout: ""
 step: 02-variables
 
 ---
-We use variables in our programs to store data. Each variable has a name and stores data of a certain type (string, integer, real etc). In Python we do now have to explicitly state the data type being stored it will work this out for itself when the variable is first used.
+We use variables in our programs to store data. Each variable has a name and stores data of a certain type (string, integer, real etc). In Python we do now have to explicitly state the data type being stored. It will work this out for itself when the variable is first used.
 
 In this section we will just use string variables. String is just the programming term for text (i.e. letters, numbers and symbols).
 
@@ -291,7 +291,7 @@ print('Adding your numbers together gives:'+c)
 
 This time you will get an error in line 4: `TypeError: Can't convert 'int' object to str implicitly`.
 
-This is because `a` and `b` are now integers. Strings are input but then are *cast* or converted to integers. This means `c` is now an integer (as it takes in the sum of to integers which in itself is an integer). 
+This is because `a` and `b` are now integers. Strings are input but then are *cast* or converted to integers. This means `c` is now an integer (as it takes in the sum of two integers which in itself is an integer). 
 
 The problem arises when we then try and add `c` to a sentence: 
 
@@ -314,7 +314,7 @@ Now the program should work.
 
 
 ## Task 2
-Task file : [task-1.py](open_file "05-data-types/task-2.py").
+Task file : [task-2.py](open_file "05-data-types/task-2.py").
 
 Write a program that asks for a length and width and outputs the area of a rectangle.
 
@@ -415,7 +415,7 @@ print('This prints out whatever the letter is')
 ## A Note on Indentation
 When you start a new line after a colon your code (if writing it inside IDLE) you should find your code indented). Lines will keep indenting until you press backspace. Python knows that anything indented is inside the structure with the colon - in this case the `if`. Indenting is considered good practice in all programming languages as it makes code easier to read but in Python it is even more important as it affects the code’s meaning.
 
-For more complex conditions we can use `and`, `or` and `not`. When you are confident conditions with if should try to find out about these to make your code more efficient.
+For more complex conditions we can use `and`, `or` and `not`. When you are confident with the if condition you should try to find out about these to make your code more efficient.
 
 ```python
 x = int(input('Enter a number between 1 and 100: '))
@@ -721,7 +721,7 @@ Call your function from the main code shown.
 ## Task 2
 Task file : [task-2.py](open_file "10-subs-functions/task-2.py").
 
-Write a function called `journeyCost`. It should take in the number of miles of the journey, price per litre of fuel in pence and how many miles it a car travels to the litre. It should return the journey price in pounds.
+Write a function called `journeyCost`. It should take in the number of miles of the journey, price per litre of fuel in pence and how many miles a car travels to the litre. It should return the journey price in pounds.
 
 The code shown is your starter code and outputs
 
@@ -735,7 +735,7 @@ Task file : [task-3.py](open_file "10-subs-functions/task-3.py").
 Write a function called `rectangle` that takes in `width` and `length` parameters. This should print out a rectangle of `X`s using those dimensions. Note: as the character `X` is higher than it is wide the dimensions will not be perfectly to scale.)
 e.g.
 
-The initial code shown outputs
+The initial code shows outputs
 
 ```bash
 XXXXX
@@ -774,7 +774,7 @@ step: 11-lists
 ---
 If we think of a variable as a box we can think of a list as a collection of boxes containing data. Each “box” has an address starting at 0.
 
-The following code produces a list called names. Feel free to copy and of the following code snippets into the `play.py` file and run it.
+The following code produces a list called names. Feel free to copy any of the following code snippets into the `play.py` file and run it.
 
 ```python
 names = ['Alf','Betsy','Charlie','David']
@@ -833,7 +833,7 @@ names.append('Anita')
 names.append('Murshed')
 names.append('Hamish')
 names.pop(1)
-print(names
+print(names)
 ```
 
 Will output `['Betsy', 'Murshed', 'Hamish']`
@@ -1174,7 +1174,7 @@ If all has worked the contents of your file should appear in your programming co
 
 The rt and wt that appear in the open command stand for read text and write text. They tell Python the type of file you are opening and what access you need to it.
 
-Sometimes we want to read a file line at a time. We do this using the readline command. If we want it to read all the lines in the file we can use a while loop. We tell the program to `readline` while we are not reading in an empty line (and so the end of the file). Of course you could, of course, change this to keep reading until it reaches any other string of your choice.
+Sometimes we want to read a file line at a time. We do this using the readline command. If we want it to read all the lines in the file we can use a while loop. We tell the program to `readline` while we are not reading in an empty line (and so the end of the file). Of course you could change this to keep reading until it reaches any other string of your choice.
 
 ```python
 myFile = open('example.txt', 'rt')
@@ -1194,7 +1194,7 @@ for line in myFile:
 myFile.close()
 ```
 
-You will notice with both of these options there are blank lines in between each line of text. To prevent this change print(line) to print(line,end='').
+You will notice with both of these options there are blank lines in between each line of text. To prevent this change `print(line)` to `print(line,end='')`.
 
 **NB** two single quotation marks not one double.
 
@@ -1293,7 +1293,7 @@ The algorithm goes as follows:
 To find all the prime numbers less than or equal to a given integer n by Eratosthenes' method:
 
 1. Create a list of consecutive integers from 2 to n: (2, 3, 4, ..., n).
-2. Initially,letpequal2,thefirstprimenumber.
+2. Initially,let p equal 2,the first prime number.
 3. Starting from p, count up in increments of p and mark each of these numbers greater than p itself in the list. These will be multiples of p: 2p, 3p, 4p, etc.; note that some of them may have already been marked.
 4. Find the first number greater than p in the list that is not marked. If there was no such number, stop. Otherwise, let p now equal this number (which is the next prime), and repeat from step 3.
 
