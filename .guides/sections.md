@@ -33,7 +33,7 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 1-screen/start.py
+    path: 1-screen/play.py
     panel: 0
 layout: 2-panels-tree
 step: 1-screen
@@ -60,7 +60,7 @@ Click to open task file : [task-3.py](open_file "1-screen/task-3.py").
 
 Write a program that says:
 
-```bash
+```
 This is
 a computer program
 that prints on several lines
@@ -71,7 +71,7 @@ Click to open the challenge file : [challenge-1.py](open_file "1-screen/challeng
 
 Write a program to say
 
-```bash
+```
 This is John's first program
 ```
 The apostrophe makes this trickier than it first may seem.
@@ -114,22 +114,17 @@ Variable names can contain letters and numbers but should always start with a le
 
 We assign a value to a variable using `=`
 
-## Task A
+## Task 1
+Task file : [task-1.py](open_file "2-variables/task-1.py").
 
-Copy and run the following program:
+Run the code to see what happens.
 
-```python
-name = 'Bob'
-print('Hello ' + name)
+## Task 2
+Task file : [task-2.py](open_file "2-variables/task-2.py").
+
+Complete the program so it uses the variable `language` to print
+
 ```
-
-## Task B
-
-Look at the file [complete-me.py](open_file "2-variables/complete-me.py").
-
-Complete the program so it uses the variable language to print
-
-```bash
 I am learning to program in Python
 ```
 
@@ -171,8 +166,9 @@ print('Hello ' + name)
 
 Will print `Hello Bob Bob`
 
-## Task C
-Complete the program in [cat-mat.py](open_file "2-variables/cat-mat.py"), so it uses the variables to print out `the cat sat on the mat`. 
+## Task 3
+Task file : [task-3.py](open_file "2-variables/task-3.py").
+Complete the program so it uses the variables to print out `the cat sat on the mat`. 
 
 Remember, you will need to add spaces.
 
