@@ -631,7 +631,7 @@ The sequence 1,4,9,16,25 is made up of square numbers (i.e.1=1^2, 4 = 2^2, 9=3^2
 ## Task 3
 Task file : [task-3.py](open_file "09-iteration2/task-3.py").
 
-The following code will create an integer `x` that is a random number between 1 and 100.
+This code will create an integer `x` that is a random number between 1 and 100.
 
 The line `import random` has to be put at the very top of the program you can use `random.randint(1,100)` wherever you want after that.
 
@@ -1203,7 +1203,10 @@ Task file : [task-1.py](open_file "13-files/task-1.py").
 Write a program that reads a list of numbers from a file then outputs the average. So if your file contained
 
 ```
-3 45 83 21
+3 
+45 
+83 
+21
 ```
 
 Your program would output: `38`
