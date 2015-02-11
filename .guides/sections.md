@@ -937,7 +937,7 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 12-strings/start.py
+    path: 12-strings/play.py
     panel: 0
 layout: ""
 step: 12-strings
@@ -1108,9 +1108,11 @@ myFile.write('I have written to a file.')
 myFile.close()
 ```
 
-Copy and run this code. If you look in the same directory where you saved your program you should now see the file example.txt. When writing to a file Python creates it if it does not yet exist.
+Run this code. If you look in the same directory where you saved your program you should now see the file example.txt. When writing to a file Python creates it if it does not yet exist.
 
 If we want multiple lines we can use the `\n` newline escape sequence.
+
+Feel free to copy and paste the code snippets below into `play.py`, then run it.
 
 ```python
 # Write a file
@@ -1133,7 +1135,7 @@ Reading from files is equally as straight forward.
 
 Make sure you have run one of the above programs so you have the file `example.txt` containing:
 
-```bash
+```
 I have written to a file.
 It now has three lines.
 The third being this one.
@@ -1177,26 +1179,31 @@ You will notice with both of these options there are blank lines in between each
 **NB** two single quotation marks not one double.
 
 
-## Task A
+## Task 1
+Task file : [task-1.py](open_file "13-files/task-1.py").
 Write a program that reads a list of numbers from a file then outputs the average. So if your file contained
 
-```bash
+```
 3 45 83 21
 ```
 
 Your program would output: `38`
 
-## Task B
-In Task A of 'Lists' you had to write a program that takes in names and stored them in a list until `END` is entered. 
+## Task 2
+Task file : [task-2.py](open_file "13-files/task-2.py").
+
+In Task 1 of 'Lists' you had to write a program that takes in names and stored them in a list until `END` is entered. 
 
 This time you are going to change it so it stores the names in between times the program is run. Adapt the program so that when it loads it looks for the file names.txt and reads any names into the list. 
 
-The user should then be able to enter new names as before. When END is typed it should output the new list (i.e. loaded names and entered names) then save it to the file `names.txt`.
+The user should then be able to enter new names as before. When `END` is typed it should output the new list (i.e. loaded names and entered names) then save it to the file `names.txt`.
 
-## Task C
-When you are confident with using read and write why not try the specimen A453 task:
+## Task 3
+Task file : [task-3.py](open_file "13-files/task-3.py").
 
-## High scores database
+When you are confident with using `read` and `write` why not try the specimen A453 task:
+
+### High scores database
 Design, code and test a system to store and manage user names and their highest score. The system must be able to
 
 - create a file
@@ -1211,7 +1218,9 @@ The system need only cater for 10 items
 ## Challenge Exercises
 These exercises are significantly more challenging than the ones encountered so far. They are a good way of practicing skills you have acquired.
 
-### Challenge Exercise One
+### Challenge 1
+Challenge file : [challenge-1.py](open_file "13-files/challenge-1.py").
+
 Write a procedure called triangle that takes in a number and then prints out a triangle of that height. so
 
 ``python
@@ -1249,8 +1258,12 @@ it should output:
 *******
 ```
 
-### Challenge Exercise Two
-The Sieve of Eratosthenes is an algorithm to find prime numbers. 
+### Challenge 2
+Challenge file : [challenge-2.py](open_file "13-files/challenge-2.py").
+
+The Sieve of Eratosthenes is an algorithm to find prime numbers. Write a program that prints out all the primes below 10,000. 
+
+[Look up the Sieve of Eratosthenes on Wikipedia](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 
 The algorithm goes as follows:
 
@@ -1294,10 +1307,6 @@ Next number not yet crossed out in the list after 5 is 7; the next step would be
 ```bash
  2  3     5     7           11    13          17    19          23                29
  ```
- 
-[Look up the Sieve of Eratosthenes](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
-
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼Write a program that prints out all the primes below 10,000.
 
 *HINT: you will need to use % which gives the remainder of a division operation. So `x=11%5` would give `1` as 11/5=2 remainder 1*
 ---
