@@ -85,23 +85,8 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 2-variables/complete-me.py
+    path: 2-variables/play.py
     panel: 0
-    index: 0
-    type: file
-    arg: 2-variables/complete-me.py
-  - action: open
-    path: 2-variables/cat-mat.py
-    panel: 0
-    index: 1
-    type: file
-    arg: 2-variables/cat-mat.py
-  - action: open
-    path: 2-variables/start.py
-    panel: 0
-    index: 2
-    type: file
-    arg: 2-variables/start.py
 layout: ""
 step: 2-variables
 
@@ -180,7 +165,7 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 3-input/start.py
+    path: 3-input/play.py
     panel: 0
 layout: ""
 step: 3-input
@@ -193,8 +178,13 @@ name=input('What is your name?')
 print('Hello '+name)
 ```
 
-## Task 3a
-Write a program that asks for the town you live in and then replies I love visiting [town name]
+## Task 1
+Task file : [task-1.py](open_file "3-input/task-1.py").
+Write a program that asks for the town you live in and then replies 
+```
+I love visiting [town name]
+```
+
 e.g.
 
 ```bash
@@ -202,24 +192,30 @@ Where do you live?  London
 I love visiting London
 ```
 
-## Task 3b
+## Task 2
+Task file : [task-2.py](open_file "3-input/task-2.py").
+
 Write a program that asks for your first name then asks for your last name and finally greets you with your full name.
 
 e.g.
-```bash
+```
 What is your first name? John
 What is your last name? Smith
 Hello John Smith
 ```
 
-## Task 3c
+## Task 3
+Task file : [task-3.py](open_file "3-input/task-3.py").
+
 Write a program that asks for your name then prints it out 5 times
 
 e.g.
-```bash
+```
 What is your name? Trevor
 Trevor Trevor Trevor Trevor Trevor
 ```
+
+
 ---
 title: Calculations
 files:
