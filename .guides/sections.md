@@ -641,6 +641,9 @@ files:
   - action: open
     path: 10-subs-functions/play.py
     panel: 0
+    index: 0
+    type: file
+    arg: 10-subs-functions/play.py
 layout: ""
 step: 10-subs-functions
 
@@ -757,7 +760,7 @@ step: 11-lists
 ---
 If we think of a variable as a box we can think of a list as a collection of boxes containing data. Each “box” has an address starting at 0.
 
-The following code produces a list called names.
+The following code produces a list called names. Feel free to copy and of the following code snippets into the `play.py` file and run it.
 
 ```python
 names=['Alf','Betsy','Charlie','David']
@@ -784,13 +787,11 @@ names=['Alf','Betsy','Charlie','David']
 names[2]='Bob'
 print(names[2])
 ```
-
 Changes the list to:
 
 | Alf | Betsy | Bob | David |
 |-|-|-|-
 | 0 | 1 | 2 | 3 |
-
 
 So it will print `Bob`
 
@@ -870,7 +871,9 @@ The two main differences between the two are:
 - Lists can hold different sorts of data whereas an array (usually, depending on the language) only holds one data type.
 - Lists change size as new items are added where as in most languages arrays have their size declared at the start.
 
-## Task A
+## Task 1
+Task file : [task-1.py](open_file "11-lists/task-1.py").
+
 Write a program that keeps asking for names until the word `END` is entered at which point it prints out the list of names.
 
 ```bash
@@ -884,15 +887,15 @@ You have entered 5 names.
 ['Alfred', 'Bradley', 'Connor', 'David', 'Emily'] 
 ```
 
-Keep your code safe for this answer you will need it in Task B.
+You will need it in Task 3.
 
 
-## Task B
+## Task 2
+Task file : [task-2.py](open_file "11-lists/task-2.py").
+
 Write a program that asks the user to enter 5 names which it stores in a list. Next, get it to pick one of these names at random and declare that person as the winner. 
 
 *HINT: you will need to generate random numbers as in Task 9c*
-
-E.g.
 
 ```bash
 Please enter name 1:
@@ -908,8 +911,10 @@ Bob
 Well Done Bob you are the winner!
 ```
 
-## Task C
-Adapt your program from 11a so it takes in a list of names but prints the out in the opposite order to which they were entered.
+## Task 3
+Task file : [task-3.py](open_file "11-lists/task-3.py").
+
+Adapt your program from [task-1.py](open_file "11-lists/task-1.py") so it takes in a list of names but prints the out in the opposite order to which they were entered.
 
 ```bash
 Please enter a name: Alfred
