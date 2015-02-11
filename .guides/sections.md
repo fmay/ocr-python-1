@@ -33,17 +33,17 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 1-screen/play.py
+    path: 01-screen/play.py
     panel: 0
 layout: 2-panels-tree
-step: 1-screen
+step: 01-screen
 
 ---
 ## Hello World
 All programmers start with the program hello world. It’s kind of a rite of passage.
 
 ## Task 1
-Click to open task file : [task-1.py](open_file "1-screen/task-1.py").
+Click to open task file : [task-01.py](open_file "1-screen/task-1.py").
 
 Run the program by pressin ghte 'Run File' button in the top menu.
 
@@ -51,12 +51,12 @@ You will hopefully see the message Hello World!
 
 
 ## Task 2
-Click to open task file : [task-2.py](open_file "1-screen/task-2.py").
+Click to open task file : [task-2.py](open_file "01-screen/task-2.py").
 
 Write code that outputs "Pleased to meet you". 
 
 ## Task 3
-Click to open task file : [task-3.py](open_file "1-screen/task-3.py").
+Click to open task file : [task-3.py](open_file "01-screen/task-3.py").
 
 Write a program that says:
 
@@ -67,7 +67,7 @@ that prints on several lines
 ```
 
 ## Challenge Exercise
-Click to open the challenge file : [challenge-1.py](open_file "1-screen/challenge-1.py").
+Click to open the challenge file : [challenge-1.py](open_file "01-screen/challenge-1.py").
 
 Write a program to say
 
@@ -85,10 +85,10 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 2-variables/play.py
+    path: 02-variables/play.py
     panel: 0
 layout: ""
-step: 2-variables
+step: 02-variables
 
 ---
 We use variables in our programs to store data. Each variable has a name and stores data of a certain type (string, integer, real etc). In Python we do now have to explicitly state the data type being stored it will work this out for itself when the variable is first used.
@@ -100,12 +100,12 @@ Variable names can contain letters and numbers but should always start with a le
 We assign a value to a variable using `=`
 
 ## Task 1
-Task file : [task-1.py](open_file "2-variables/task-1.py").
+Task file : [task-1.py](open_file "02-variables/task-1.py").
 
 Run the code to see what happens.
 
 ## Task 2
-Task file : [task-2.py](open_file "2-variables/task-2.py").
+Task file : [task-2.py](open_file "02-variables/task-2.py").
 
 Complete the program so it uses the variable `language` to print
 
@@ -152,7 +152,7 @@ print('Hello ' + name)
 Will print `Hello Bob Bob`
 
 ## Task 3
-Task file : [task-3.py](open_file "2-variables/task-3.py").
+Task file : [task-3.py](open_file "02-variables/task-3.py").
 Complete the program so it uses the variables to print out `the cat sat on the mat`. 
 
 Remember, you will need to add spaces.
@@ -165,10 +165,10 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 3-input/play.py
+    path: 03-input/play.py
     panel: 0
 layout: ""
-step: 3-input
+step: 03-input
 
 ---
 We can now look at starting to make our programs interactive. We are going to take in input from the user using the input command.
@@ -179,7 +179,7 @@ print('Hello '+name)
 ```
 
 ## Task 1
-Task file : [task-1.py](open_file "3-input/task-1.py").
+Task file : [task-1.py](open_file "03-input/task-1.py").
 Write a program that asks for the town you live in and then replies 
 ```
 I love visiting [town name]
@@ -193,7 +193,7 @@ I love visiting London
 ```
 
 ## Task 2
-Task file : [task-2.py](open_file "3-input/task-2.py").
+Task file : [task-2.py](open_file "03-input/task-2.py").
 
 Write a program that asks for your first name then asks for your last name and finally greets you with your full name.
 
@@ -205,7 +205,7 @@ Hello John Smith
 ```
 
 ## Task 3
-Task file : [task-3.py](open_file "3-input/task-3.py").
+Task file : [task-3.py](open_file "03-input/task-3.py").
 
 Write a program that asks for your name then prints it out 5 times
 
@@ -222,10 +222,10 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 4-calculations/play.py
+    path: 04-calculations/play.py
     panel: 0
 layout: ""
-step: 4-calculations
+step: 04-calculations
 
 ---
 We can carry out calculations in Python. The arithmetic operators we use to do this are: 
@@ -236,17 +236,17 @@ We can carry out calculations in Python. The arithmetic operators we use to do t
 - `/` division
 
 ## Task 1
-Task file : [task-1.py](open_file "4-calculations/task-1.py").
+Task file : [task-1.py](open_file "04-calculations/task-1.py").
 
 Run the program and see what it outputs.
 
 ## Task 2
-Task file : [task-2.py](open_file "4-calculations/task-2.py").
+Task file : [task-2.py](open_file "04-calculations/task-2.py").
 
 Try changing the calculations to new ones. We can put the results of calculations into variables. These variables will not be string but 'integer' (whole numbers) or 'float' (decimal).
 
 ## Task 3
-Task file : [task-3.py](open_file "4-calculations/task-3.py").
+Task file : [task-3.py](open_file "04-calculations/task-3.py").
 
 Complete this program so it uses addition on the two variables to print the number '15'
 
@@ -256,13 +256,10 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 5-data-types/play.py
+    path: 05-data-types/play.py
     panel: 0
-    index: 0
-    type: file
-    arg: 5-data-types/play.py
 layout: ""
-step: 5-data-types
+step: 05-data-types
 
 ---
 Every variable has a given data type. The most common data types are:
@@ -275,7 +272,7 @@ Every variable has a given data type. The most common data types are:
 In some languages we have to tell the computer what data type a variable is going to be. Python, on the other hand, is able to decide the data type of the variable according to what value it is first given (or to use the correct term what it is initialised with). This can cause problems when we try to do something with the wrong data type.
 
 ## Task 1
-Task file : [task-1.py](open_file "5-data-types/task-1.py").
+Task file : [task-1.py](open_file "05-data-types/task-1.py").
 
 Run the program.
 
@@ -317,7 +314,7 @@ Now the program should work.
 
 
 ## Task 2
-Task file : [task-1.py](open_file "5-data-types/task-2.py").
+Task file : [task-1.py](open_file "05-data-types/task-2.py").
 
 Write a program that asks for a length and width and outputs the area of a rectangle.
 
@@ -330,7 +327,7 @@ The area is: 45
 ```
 
 ## Task 3
-Task file : [task-3.py](open_file "5-data-types/task-3.py").
+Task file : [task-3.py](open_file "05-data-types/task-3.py").
 
 The formula for the volume of a cylinder is `PI*r*r*h` where `r` is the radius of the upper surface and `h` is the height.
 
@@ -347,10 +344,10 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 6-if/play.py
+    path: 06-if/play.py
     panel: 0
 layout: ""
-step: 6-if
+step: 06-if
 
 ---
 Sometimes we only want a program to execute code under certain circumstances. We call this selection. The most commonly used way of doing this is using if. Here we say if a condition is true execute some code.
@@ -431,19 +428,19 @@ print('Your number is not valid')
 A common mistake would be to write the `if` line as `if x>=1 and <=100` missing out the second `x`. This is wrong and will generate an error.
 
 ## Task 1
-Task file : [task-1.py](open_file "6-if/task-1.py").
+Task file : [task-1.py](open_file "06-if/task-1.py").
 
 Run the code and see what happens.
 
 Change the question so it asks for the capital of England and gives appropriate answers to different entries.
 
 ## Task 2
-Task file : [task-2.py](open_file "6-if/task-2.py").
+Task file : [task-2.py](open_file "06-if/task-2.py").
 
 Below is a program that asks for three numbers and outputs `SNAP` if they all match. Use your knowledge of the and, or and not operators to make the program more efficient.
 
 ## Task 3
-Task file : [task-3.py](open_file "6-if/task-3.py").
+Task file : [task-3.py](open_file "06-if/task-3.py").
 
 The grade boundaries for a test are: 
 
@@ -463,7 +460,7 @@ files:
   - action: close
     path: "#tabs"
 layout: ""
-step: 7-readability
+step: 07-readability
 
 ---
 In the last section we looked at indentation as a way of making your code easier to read. In the development section of A453 one of the descriptors for the top mark band is:
@@ -516,10 +513,10 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 8-iteration1/play.py
+    path: 08-iteration1/play.py
     panel: 0
 layout: ""
-step: 8-iteration1
+step: 08-iteration1
 
 ---
 One of the things that makes computers so useful is the speed at which they do things. This means we can get them to do something over and over again. We call this iteration or looping. We will look at two types of loop, the first of which is a count controlled loop. This is when a program carries out a set of instructions a certain number of times. To do a count controlled loop we use `for`. Note how anything inside the loop is indented.
@@ -544,7 +541,7 @@ In the loop for `i in range(x,y)`,  `x` is the starting value of `i` and `y` is 
 Traditionally loops tend to use the variables `i`, `j` and `k` and you may see lots of code that conforms to this convention. There is, however, no reason why you can’t use any other variable name especially if it makes your code more readable.
 
 ## Task 1
-Task file : [task-1.py](open_file "8-iteration1/task-1.py").
+Task file : [task-1.py](open_file "08-iteration1/task-1.py").
 
 Modify the code to output the word computing 15 times. We use the variable `i` inside the loop.
 
@@ -559,7 +556,7 @@ It produces the following output
 ```
 
 ## Task 2
-Task file : [task-2.py](open_file "8-iteration1/task-2.py").
+Task file : [task-2.py](open_file "08-iteration1/task-2.py").
 
 Modify the program to takes in a letter and number then, using a `for` loop, prints out that letter that many times.
 
@@ -570,7 +567,7 @@ TTTTTT
 ```
 
 ## Task 3
-Task file : [task-3.py](open_file "8-iteration1/task-3.py").
+Task file : [task-3.py](open_file "08-iteration1/task-3.py").
 
 Write a program that asks for a number then outputs it’s 10 times table.
 
@@ -595,10 +592,10 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 9-iteration2/play.py
+    path: 09-iteration2/play.py
     panel: 0
 layout: ""
-step: 9-iteration2
+step: 09-iteration2
 
 ---
 We have looked at count controlled loops, we will now look at condition controlled loops. These are loops which continue to repeat code while a condition is true.
@@ -622,17 +619,17 @@ while x < 5:
 Now try running the above code.
 
 ## Task 1
-Task file : [task-1.py](open_file "9-iteration2/task-1.py").
+Task file : [task-1.py](open_file "09-iteration2/task-1.py").
 
 Write a program that asks for a password and keeps asking until the correct password, `apple` is entered and then says `Accepted`.
 
 ## Task 2
-Task file : [task-2.py](open_file "9-iteration2/task-2.py").
+Task file : [task-2.py](open_file "09-iteration2/task-2.py").
 
 The sequence 1,4,9,16,25 is made up of square numbers (i.e.1=1^2, 4 = 2^2, 9=3^2 etc.). Write a program that writes out all the square numbers under 5000.
 
 ## Task 3
-Task file : [task-3.py](open_file "9-iteration2/task-3.py").
+Task file : [task-3.py](open_file "09-iteration2/task-3.py").
 
 The following code will create an integer `x` that is a random number between 1 and 100.
 
