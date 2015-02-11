@@ -235,34 +235,21 @@ We can carry out calculations in Python. The arithmetic operators we use to do t
 - `*` multiplication
 - `/` division
 
-## Task A
-Copy and run the following program
+## Task 1
+Task file : [task-1.py](open_file "4-calculations/task-1.py").
 
-```python
-print(1+6)
-print(7-5)
-print(3*9)
-print(7/2)
-```
+Run the program and see what it outputs.
 
-## Task B
-Try changing the calculations to new ones. We can put the results of calculations into variables. These variables will not be string but integer (whole numbers) or float (decimal).
+## Task 2
+Task file : [task-2.py](open_file "4-calculations/task-2.py").
 
-```python
-a=10
-b=2
-c=a/b
-print(c)
-```
+Try changing the calculations to new ones. We can put the results of calculations into variables. These variables will not be string but 'integer' (whole numbers) or 'float' (decimal).
 
-## Task C
-Complete this program so it uses addition on the two variables to print the number 15
+## Task 3
+Task file : [task-3.py](open_file "4-calculations/task-3.py").
 
-```python
-a=7
-b=8
-c= [REMAINDER OF PROGRAM HERE]
-```
+Complete this program so it uses addition on the two variables to print the number '15'
+
 ---
 title: Data Types
 files:
