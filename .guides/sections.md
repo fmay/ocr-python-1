@@ -174,7 +174,7 @@ step: 3-input
 We can now look at starting to make our programs interactive. We are going to take in input from the user using the input command.
 
 ```python
-name=input('What is your name?')
+name = input('What is your name?')
 print('Hello '+name)
 ```
 
@@ -288,7 +288,7 @@ Try changing the code to this:
 ```python
 a = int(input('Enter number 1:'))
 b = int(input('Enter number 2:'))
-c=a+b
+c = a + b
 print('Adding your numbers together gives:'+c)
 ```
 
@@ -309,7 +309,7 @@ The solution is to cast `c` back to a string when we use it using `str()`.
 ```python
 a = int(input('Enter number 1:'))
 b = int(input('Enter number 2:'))
-c=a+b
+c = a + b
 print('Adding your numbers together gives:'+str(c))
 ```
 
@@ -373,7 +373,7 @@ So:
 
 ```python
 letter = 'a'
-if letter=='a':
+if letter == 'a':
     print('This prints if letter is a')
 ```
 
@@ -381,7 +381,7 @@ We can add as many statements we want inside the `if`. Each should be indented.
 
 ```python
 letter = 'a'
-if letter=='a':
+if letter == 'a':
      print('This prints if letter is a')
      print('This prints as well')
 ```
@@ -389,7 +389,7 @@ if letter=='a':
 When we want to stop the `if`, we remove the indentation.
 
 ```python
-if letter=='a':
+if letter == 'a':
      print('This prints if letter is a')
      print('This prints as well')
 print('This prints out whatever the letter is')
@@ -397,7 +397,7 @@ print('This prints out whatever the letter is')
 We can tell the computer to do something different when the condition isn’t true using the `else` keyword.
 
 ```python
-if letter=='a':
+if letter == 'a':
      print('This prints if letter is a')
      print('This prints as well')
 else:
@@ -405,10 +405,10 @@ else:
      print('As does this line')
 print('This prints out whatever the letter is')
 
-if letter=='a':
+if letter == 'a':
      print('This prints if letter is a')
      print('This prints as well')
-elif letter=='b':
+elif letter == 'b':
      print('This prints if the letter is b')
 else:
      print('This prints if the letter is neither a nor b')
@@ -421,8 +421,8 @@ When you start a new line after a colon your code (if writing it inside IDLE) yo
 For more complex conditions we can use `and`, `or` and `not`. When you are confident conditions with if should try to find out about these to make your code more efficient.
 
 ```python
-x=int(input('Enter a number between 1 and 100: '))
-if x>=1 and x<=100:
+x = int(input('Enter a number between 1 and 100: '))
+if x >= 1 and x <= 100:
     print('You have entered a valid number')
 else:
 print('Your number is not valid')
@@ -477,14 +477,31 @@ Commenting in Python is done using the hash # character. A comment can be put at
 ```python
 #Question to ask user the capital of France
 print('What is the capital of France?')
-if city== 'Paris':
+if city == 'Paris':
      print('Well done')
-elif city=='Lyon': #Handle common wrong answer
+elif city == 'Lyon': #Handle common wrong answer
      print('Right country, wrong city')
-elif city=='F':
+elif city == 'F':
      print('Terrible joke and wrong answer.')
 else: #any other wrong answer.
      print('Sorry wrong answer')
+```
+
+## Use of Spaces
+It is recommended that you put spaces before and after all operators.
+
+```python
+x = 1
+if city == 'Paris'
+a = b + c
+```
+
+Not
+
+```python
+x=1
+if city=='Paris'
+a=b+c
 ```
 
 ## Variable Names
@@ -529,7 +546,7 @@ Traditionally loops tend to use the variables `i`, `j` and `k` and you may see l
 ## Task 1
 Task file : [task-1.py](open_file "8-iteration1/task-1.py").
 
-This file outputs the word computing 15 times. We use the variable `i` inside the loop.
+Modify the code to output the word computing 15 times. We use the variable `i` inside the loop.
 
 It produces the following output
 
@@ -544,7 +561,7 @@ It produces the following output
 ## Task 2
 Task file : [task-2.py](open_file "8-iteration1/task-2.py").
 
-Write a program that takes in a letter and number then, using a `for` loop, prints out that letter that many times.
+Modify the program to takes in a letter and number then, using a `for` loop, prints out that letter that many times.
 
 ```
 Please enter a letter: T
@@ -590,7 +607,7 @@ These are exactly the same type of conditions we looked at when using `if`
 
 ```python
 x=0
-while x<5:
+while x < 5:
      print('looping')
 ```
 
@@ -598,9 +615,9 @@ If we run the above code (don’t) you will find it goes on forever printing loo
 
 ```python
 x=0
-while x<5:
+while x < 5:
      print('looping')
-     x=x+1
+     x = x + 1
 ```
 Now try running the above code.
 
@@ -690,7 +707,7 @@ def double(number):
     twicenum=2*number
     return twicenum
 #Main Program
-a=6
+a = 6
 print('Double a is')
 print(double(6))
 ```
@@ -763,7 +780,7 @@ If we think of a variable as a box we can think of a list as a collection of box
 The following code produces a list called names. Feel free to copy and of the following code snippets into the `play.py` file and run it.
 
 ```python
-names=['Alf','Betsy','Charlie','David']
+names = ['Alf','Betsy','Charlie','David']
 ```
 names:
 
@@ -774,7 +791,7 @@ names:
 We can then access any element of the list by giving its index in square brackets.
 
 ```python
-names=['Alf','Betsy','Charlie','David']
+names = ['Alf','Betsy','Charlie','David']
 print(names[2])
 ```
 
@@ -783,8 +800,8 @@ Will print `Charlie`
 We can also alter the contents of the list by referring to the elements by their index.
 
 ```python
-names=['Alf','Betsy','Charlie','David']
-names[2]='Bob'
+names = ['Alf','Betsy','Charlie','David']
+names[2] = 'Bob'
 print(names[2])
 ```
 Changes the list to:
@@ -800,7 +817,7 @@ If we start off with our list as empty we can create it with just two empty squa
 To add entries to the list we then call the append function.
 
 ```python
-names=[]
+names = []
 names.append('Betsy')
 names.append('Anita')
 names.append('Murshed')
@@ -813,7 +830,7 @@ Will output `['Betsy', 'Anita', 'Murshed', 'Hamish']`
 To remove an item from the list we use the pop method if we want to remove by index
 
 ```python
-names=[]
+names = []
 names.append('Betsy')
 names.append('Anita')
 names.append('Murshed')
@@ -827,7 +844,7 @@ Will output `['Betsy', 'Murshed', 'Hamish']`
 If we know the item we want to remove we can use the remove function which deletes the first instance of it.
 
 ```python
-names=[]
+names = []
 names.append('Betsy')
 names.append('Anita')
 names.append('Murshed')
@@ -841,7 +858,7 @@ Will also output `['Betsy', 'Murshed', 'Hamish']`
 To get the number of items in a list we use len. 
 
 ```python
-x=len(names)
+x = len(names)
 ```
 
 Makes `x` the number of names in the list.
@@ -849,7 +866,7 @@ Makes `x` the number of names in the list.
 We can cycle through a list with a for loop.
 
 ```python
-names=['Anita','Betsy', 'Murshed', 'Hamish']
+names = ['Anita','Betsy', 'Murshed', 'Hamish']
 for i in names:
   print(i)
 ```
@@ -964,7 +981,7 @@ Sometimes we might just want part of the string. We can do this by treating the 
 We can then refer to letters by their index (remembering that a list starts at index 0). So,
 
 ```python
-text='Sandwich' print(text[2])
+text = 'Sandwich' print(text[2])
 ```
 
 will output the letter `n`.
@@ -978,7 +995,7 @@ Stringname[position of first letter:position after last letter]
 So
 
 ```python
-text= 'Sandwich'
+text = 'Sandwich'
 print(text[0:4])
 ```
 
@@ -987,7 +1004,7 @@ produces `Sand`
 and
 
 ```python
-text= 'Sandwich'
+text = 'Sandwich'
 print(text[1:5])
 ```
 
@@ -996,8 +1013,8 @@ produces `andw`
 If we want the length of a string we use len just like we did with lists. So:
 
 ```python
-text= 'Sandwich'
-a=len(text)
+text = 'Sandwich'
+a  =len(text)
 print(a)
 ```
 
@@ -1046,48 +1063,50 @@ It would be excellent practice to give this a go. On the next page is one versio
 ```python
 #Program to assess strength of password
 #Ask for password until one of correct length is entered
-passwordValid=False
-while passwordValid==False:
-    password=input('Please enter your password ')
-    if len(password)<6:
+passwordValid = False
+while passwordValid = =False:
+    password = input('Please enter your password ')
+    if len(password) < 6:
         print('Password too short - must be 6 or more characters')
-    elif len(password)>12:
+    elif len(password) > 12:
         print('Password too long - must be 12 or fewer
 characters')
     else:
         print('Password Accepted')
-        passwordValid=True
+        passwordValid = True
         
 #Cycle through the password character by character counting
 #the number of each 'type' of character.
-lowerCount=0
-upperCount=0
-numberCount=0
+lowerCount = 0
+upperCount = 0
+numberCount = 0
 for letter in password:
-    if letter>='a' and letter<='z':
+    if letter >= 'a' and letter <= 'z':
         lowerCount=lowerCount+1
-    elif letter>='A' and letter<='Z':
-        upperCount=upperCount+1
-    elif letter>='0' and letter<='9':
-        numberCount=numberCount+1
+    elif letter >= 'A' and letter <= 'Z':
+        upperCount = upperCount+1
+    elif letter >= '0' and letter <= '9':
+        numberCount = numberCount+1
         
 #Count up the types of character
-typesOfChar=0
-if lowerCount>0:
-    typesOfChar=typesOfChar+1
-if upperCount>0:
-    typesOfChar=typesOfChar+1
-if numberCount>0:
-    typesOfChar=typesOfChar+1
+typesOfChar = 0
+if lowerCount > 0:
+    typesOfChar = typesOfChar+1
+if upperCount > 0:
+    typesOfChar = typesOfChar+1
+if numberCount > 0:
+    typesOfChar = typesOfChar+1
     
 #Print out the strength of the password
-if typesOfChar==1:
+if typesOfChar == 1:
     print('This is a WEAK password')
-elif typesOfChar==2:
+elif typesOfChar == 2:
     print('This is a MEDIUM password')
 else:
     print('This is a STRONG password')
 ```
+
+
 ---
 title: Files
 files:

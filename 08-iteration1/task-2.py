@@ -1,6 +1,4 @@
-# Task 3
+# Task 2
 # Press the 'Run File' menu button to execute
  
-a=7
-b=8
-c=
+    
