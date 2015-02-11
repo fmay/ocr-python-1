@@ -39,45 +39,6 @@ layout: 2-panels-tree
 step: 1-screen
 
 ---
-## Hello World
-All programmers start with the program hello world. It’s kind of a rite of passage.
-
-## Task 1
-Click to open task file : [task-1.py](open_file "1-screen/task-1.py").
-
-Run the program by pressin ghte 'Run File' button in the top menu.
-
-You will hopefully see the message Hello World!
-
-
-## Task 2
-Click to open task file : [task-2.py](open_file "1-screen/task-2.py").
-
-Write code that outputs "Pleased to meet you". 
-
-## Task 3
-Click to open task file : [task-3.py](open_file "1-screen/task-3.py").
-
-Write a program that says:
-
-```bash
-This is
-a computer program
-that prints on several lines
-```
-
-## Challenge Exercise
-Click to open the challenge file : [challenge-1.py](open_file "1-screen/challenge-1.py").
-
-Write a program to say
-
-```bash
-This is John's first program
-```
-The apostrophe makes this trickier than it first may seem.
-*HINT: Use Google to find out about 'escape characters' in Python.*
-
-
 
 ---
 title: Storing data in variables
