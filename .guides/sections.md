@@ -960,7 +960,7 @@ layout: ""
 step: 12-strings
 
 ---
-A *string* is a set of characters strung together, so `a`, `hello`, `hello world`, 'ABC&^%def' or even `jkh askjha skja s`.
+A *string* is a set of characters strung together, so `a`, `hello`, `hello world` or even `ABC&^%def` and `jkh askjha skja s`.
 
 Often we want to perform operations on strings. This may involve cycling through letters in the string. This is particularly easy in Python as we can do it in a for loop.
 
@@ -1019,7 +1019,7 @@ outputs
 
 `8`
 
-￼## Task 2
+## Task 2
 Task file : [task-2.py](open_file "12-strings/task-2.py").
 
 Change the previous program so it counts the number of occurrences of the lowercase letter a.
@@ -1057,6 +1057,7 @@ It would be excellent practice to give this a go. On the next page is one versio
 ## Worked Password Example
 **NB** This is just the code section. To score full marks in A453 you would need design, testing and evaluation as appropriate.
 
+
 ```python
 #Program to assess strength of password
 #Ask for password until one of correct length is entered
@@ -1066,8 +1067,7 @@ while passwordValid = =False:
     if len(password) < 6:
         print('Password too short - must be 6 or more characters')
     elif len(password) > 12:
-        print('Password too long - must be 12 or fewer
-characters')
+        print('Password too long - must be 12 or fewer characters')
     else:
         print('Password Accepted')
         passwordValid = True
@@ -1101,7 +1101,9 @@ elif typesOfChar == 2:
     print('This is a MEDIUM password')
 else:
     print('This is a STRONG password')
+
 ```
+
 
 
 ---
@@ -1136,8 +1138,7 @@ Feel free to copy and paste the code snippets below into `play.py`, then run it.
 ```python
 # Write a file
 myFile = open('example.txt', 'wt')
-myFile.write('I have written to a file.\nIt now has three
-lines\nThe third being this one')
+myFile.write('I have written to a file.\nIt now has three lines\nThe third being this one')
 myFile.close()
 Alternatively we can use spread it out over several lines (but note we still need the \n)
 
@@ -1245,7 +1246,7 @@ Challenge file : [challenge-1.py](open_file "13-files/challenge-1.py").
 
 Write a procedure called triangle that takes in a number and then prints out a triangle of that height. so
 
-``python
+```python
 triangle(4)
 ```
 
