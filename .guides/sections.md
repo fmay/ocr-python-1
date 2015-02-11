@@ -43,17 +43,17 @@ step: 01-screen
 All programmers start with the program hello world. It’s kind of a rite of passage.
 
 ## Task 1
-Click to open task file : [task-01.py](open_file "1-screen/task-1.py").
+Click to open task file : [task-1.py](open_file "01-screen/task-1.py").
 
-Run the program by pressin ghte 'Run File' button in the top menu.
+Run the program by pressing the 'Run File' button in the top menu.
 
-You will hopefully see the message Hello World!
+You will hopefully see the message `Hello World!`.
 
 
 ## Task 2
 Click to open task file : [task-2.py](open_file "01-screen/task-2.py").
 
-Write code that outputs "Pleased to meet you". 
+Write code that outputs `Pleased to meet you`. 
 
 ## Task 3
 Click to open task file : [task-3.py](open_file "01-screen/task-3.py").
@@ -437,7 +437,7 @@ Change the question so it asks for the capital of England and gives appropriate 
 ## Task 2
 Task file : [task-2.py](open_file "06-if/task-2.py").
 
-Below is a program that asks for three numbers and outputs `SNAP` if they all match. Use your knowledge of the and, or and not operators to make the program more efficient.
+`task-2.py` is a program that asks for three numbers and outputs `SNAP` if they all match. Use your knowledge of the `and`, `or` and `not` operators to make the program more efficient.
 
 ## Task 3
 Task file : [task-3.py](open_file "06-if/task-3.py").
