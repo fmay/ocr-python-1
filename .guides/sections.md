@@ -752,7 +752,7 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 11-lists/start.py
+    path: 11-lists/play.py
     panel: 0
 layout: ""
 step: 11-lists
@@ -947,14 +947,10 @@ A *string* is a set of characters strung together, so `a`, `hello`, `hello world
 
 Often we want to perform operations on strings. This may involve cycling through letters in the string. This is particularly easy in Python as we can do it in a for loop.
 
-## Task A
-Copy and run the following program.
+## Task 1
+Task file : [task-1.py](open_file "12-strings/task-1.py").
 
-```python
-sentence = 'The cat sat on the mat.'
-for letter in sentence:
-    print(letter)
-```
+Copy and run the code.
 
 Sometimes we might just want part of the string. We can do this by treating the string as a list of characters.
 
@@ -972,7 +968,7 @@ will output the letter `n`.
 
 If you want a group of letters this is done using the following notation.
 
-```bash
+```
 Stringname[position of first letter:position after last letter]
 ```
 
@@ -1006,13 +1002,19 @@ outputs
 
 `8`
 
-￼## Task B
+￼## Task 2
+Task file : [task-2.py](open_file "12-strings/task-2.py").
+
 Change the previous program so it counts the number of occurrences of the lowercase letter a.
 
-## Task C
-Write a program that takes in a word and says whether or not it is a palindrome. A palindrome is a word that is the same backwards as forwards like noon and radar.
+## Task 3
+Task file : [task-3.py](open_file "12-strings/task-3.py").
+
+Write a program that takes in a word and says whether or not it is a palindrome. A palindrome is a word that is the same backwards as forwards like 'noon' and 'radar'.
 
 ## Specimen Exercise
+Specimen file : [specimen-1.py](open_file "12-strings/specimen-1.py").
+
 A good exercise to test your understanding of string handling is the password strength exercise in the Specimen A453 tasks.
 
 Design, code test and evaluate a system to accept and test a password for certain characteristics.
@@ -1021,7 +1023,8 @@ Design, code test and evaluate a system to accept and test a password for certai
 - The system must indicate that the password has failed and why, asking the user to re enter their choice until a successful password is entered.
 - A message to indicate that the password is acceptable must be displayed.
 - Password strength can be assessed against simple criteria to assess its suitability; for example a password system using only upper and lower case alphabetical characters and numeric characters could assess the password strength as:
-    WEAK if only one type used, eg all lower case or all numeric MEDIUM if two types are used
+    WEAK if only one type used, eg all lower case or all numeric
+    MEDIUM if two types are used
     STRONG if all three types are used.
 
 For example
