@@ -256,8 +256,11 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 5-data-types/start.py
+    path: 5-data-types/play.py
     panel: 0
+    index: 0
+    type: file
+    arg: 5-data-types/play.py
 layout: ""
 step: 5-data-types
 
@@ -276,9 +279,9 @@ Task file : [task-1.py](open_file "5-data-types/task-1.py").
 
 Run the program.
 
-If you enter the numbers `5` and `4` it will output `54`. This is because Python treats anything received through the input function as a `string`. We need to tell Python we want to convert this string to an `integer` before putting it into the variable. This is done using *type casting*.
+If you enter the numbers `5` and `4` it will output `54`. This is because Python treats anything received through the input function as a string. We need to tell Python we want to convert this string to an integer before putting it into the variable. This is done using *type casting*.
 
-To cast data to an `integer` we use `int()`
+To cast data to an integer we use `int()`
 
 Try changing the code to this:
 
@@ -374,7 +377,7 @@ if letter=='a':
     print('This prints if letter is a')
 ```
 
-We can add as many statements we want inside the if. Each should be indented.
+We can add as many statements we want inside the `if`. Each should be indented.
 
 ```python
 letter = 'a'
@@ -383,7 +386,7 @@ if letter=='a':
      print('This prints as well')
 ```
 
-When we want to stop the if we remove the indentation.
+When we want to stop the `if`, we remove the indentation.
 
 ```python
 if letter=='a':
@@ -391,7 +394,7 @@ if letter=='a':
      print('This prints as well')
 print('This prints out whatever the letter is')
 ```
-We can tell the computer to do something different when the condition isn’t true using the else keyword.
+We can tell the computer to do something different when the condition isn’t true using the `else` keyword.
 
 ```python
 if letter=='a':
@@ -413,9 +416,9 @@ print('This prints out whatever the letter is')
 ```
 
 ## A Note on Indentation
-When you start a new line after a colon your code (if writing it inside IDLE) you should find your code indented). Lines will keep indenting until you press backspace. Python knows that anything indented is inside the structure with the colon - in this case the if. Indenting is considered good practice in all programming languages as it makes code easier to read but in Python it is even more important as it affects the code’s meaning.
+When you start a new line after a colon your code (if writing it inside IDLE) you should find your code indented). Lines will keep indenting until you press backspace. Python knows that anything indented is inside the structure with the colon - in this case the `if`. Indenting is considered good practice in all programming languages as it makes code easier to read but in Python it is even more important as it affects the code’s meaning.
 
-For more complex conditions we can use and, or and not. When you are confident conditions with if should try to find out about these to make your code more efficient.
+For more complex conditions we can use `and`, `or` and `not`. When you are confident conditions with if should try to find out about these to make your code more efficient.
 
 ```python
 x=int(input('Enter a number between 1 and 100: '))
@@ -425,45 +428,26 @@ else:
 print('Your number is not valid')
 ```
 
-A common mistake would be to write the if line as if x>=1 and <=100 missing out the second x. This is wrong and will generate an error.
+A common mistake would be to write the `if` line as `if x>=1 and <=100` missing out the second `x`. This is wrong and will generate an error.
 
-## Task A
-Copy and run the code below.
+## Task 1
+Task file : [task-1.py](open_file "6-if/task-1.py").
 
-```python
-city=input('What is the capital of France?')
-if city== 'Paris':
-     print('Well done')
-elif city=='Lyon':
-     print('Right country, wrong city')
-elif city=='F':
-     print('Terrible joke and wrong answer.')
-else:
-     print('Sorry wrong answer')
-```
+Run the code and see what happens.
 
 Change the question so it asks for the capital of England and gives appropriate answers to different entries.
 
-## Task B
-Below is a program that asks for three numbers and outputs SNAP if they all match. Use your knowledge of the and, or and not operators to make the program more efficient.
+## Task 2
+Task file : [task-2.py](open_file "6-if/task-2.py").
 
-```python
-one=int(input('Please enter number 1: '))
-two=int(input('Please enter number 2: '))
-three=int(input('Please enter number 3: '))
-if(one==two):
-    if(two==three):
-        print('SNAP!')
-    else:
-        print('They do not all match')
-else:
-    print('They do not all match')
-```
+Below is a program that asks for three numbers and outputs `SNAP` if they all match. Use your knowledge of the and, or and not operators to make the program more efficient.
 
-## Task C
+## Task 3
+Task file : [task-3.py](open_file "6-if/task-3.py").
+
 The grade boundaries for a test are: 
 
-```bash
+```
 U below 40
 D – 40
 C – 50
@@ -472,7 +456,6 @@ A – 70
 ```
 
 Write a program that asks for a mark and then says what grade it is worth.
-
 
 ---
 title: Code readability
