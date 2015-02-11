@@ -412,8 +412,10 @@ else:
 print('This prints out whatever the letter is')
 ```
 
+Notice the `elif` statement? This means 'else if'. You can have any number of 'else if' conditions under each other to catch specific conditions before the `else` handles any previously unmatched conditions.
+
 ## A Note on Indentation
-When you start a new line after a colon your code (if writing it inside IDLE) you should find your code indented). Lines will keep indenting until you press backspace. Python knows that anything indented is inside the structure with the colon - in this case the `if`. Indenting is considered good practice in all programming languages as it makes code easier to read but in Python it is even more important as it affects the code’s meaning.
+Python knows that anything indented is inside the structure with the colon - in this case the `if`. Indenting is considered good practice in all programming languages as it makes code easier to read but in Python it is even more important as it affects the code’s meaning.
 
 For more complex conditions we can use `and`, `or` and `not`. When you are confident with the if condition you should try to find out about these to make your code more efficient.
 
@@ -901,7 +903,7 @@ You have entered 5 names.
 ['Alfred', 'Bradley', 'Connor', 'David', 'Emily'] 
 ```
 
-You will need it in Task 3.
+You will need to generate random numbers as you did in 'Conditional Loops - Task 3'.
 
 
 ## Task 2
