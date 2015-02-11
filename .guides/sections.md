@@ -347,7 +347,7 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 6-if/start.py
+    path: 6-if/play.py
     panel: 0
 layout: ""
 step: 6-if
@@ -499,13 +499,13 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 8-iteration1/start.py
+    path: 8-iteration1/play.py
     panel: 0
 layout: ""
 step: 8-iteration1
 
 ---
-One of the things that makes computers so useful is the speed at which they do things. This means we can get them to do something over and over again. We call this iteration or looping. We will look at two types of loop, the first of which is a count controlled loop. This is when a program carries out a set of instructions a certain number of times. To do a count controlled loop we use for. Note how anything inside the loop is indented.
+One of the things that makes computers so useful is the speed at which they do things. This means we can get them to do something over and over again. We call this iteration or looping. We will look at two types of loop, the first of which is a count controlled loop. This is when a program carries out a set of instructions a certain number of times. To do a count controlled loop we use `for`. Note how anything inside the loop is indented.
 
 ```python
 for i in range(0,5):
@@ -514,7 +514,7 @@ for i in range(0,5):
 
 Will output
 
-```bash
+```
 looping
 looping
 looping
@@ -522,21 +522,18 @@ looping
 looping
 ```
 
-In the loop for `i in range(x,y)` x is the starting value of i and y is the one above what it will get to. So above it runs with i equal to 0,1,2,3 and 4.
+In the loop for `i in range(x,y)`,  `x` is the starting value of `i` and `y` is the one above what it will get to. So above it runs with `i` equal to `0,1,2,3` and `4`.
 
-Traditionally loops tend to use the variables i,j and k and you may see lots of code that conforms to this convention. There is, however, no reason why you can’t use any other variable name especially if it makes your code more readable.
+Traditionally loops tend to use the variables `i`, `j` and `k` and you may see lots of code that conforms to this convention. There is, however, no reason why you can’t use any other variable name especially if it makes your code more readable.
 
-## Task A
-Write a program that outputs the word computing 15 times. We can use the variable i inside the loop.
+## Task 1
+Task file : [task-1.py](open_file "8-interation1/task-1.py").
 
-```python
-for i in range(0,5):
-    print(str(i)+' looping')
+This file outputs the word computing 15 times. We use the variable `i` inside the loop.
+
+It produces the following output
+
 ```
-
-Produces the followin output
-
-```bash
 0 looping
 1 looping
 2 looping
@@ -544,21 +541,23 @@ Produces the followin output
 4 looping
 ```
 
-## Task B
-Write a program that takes in a letter and number then, using a for loop, prints out that letter that many times.
+## Task 2
+Task file : [task-2.py](open_file "8-interation1/task-2.py").
 
-E.g.
-```bash
+Write a program that takes in a letter and number then, using a `for` loop, prints out that letter that many times.
+
+```
 Please enter a letter: T
 Please enter a number: 6
 TTTTTT
 ```
 
-## Task C
-Write a program that asks for a number then outputs it’s 10 times table.
-E.g.
+## Task 3
+Task file : [task-3.py](open_file "8-interation1/task-3.py").
 
-```bash
+Write a program that asks for a number then outputs it’s 10 times table.
+
+```
 Please enter a number: 7
 1 times 7 is 7
 2 times 7 is 14
