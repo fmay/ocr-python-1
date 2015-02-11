@@ -527,7 +527,7 @@ In the loop for `i in range(x,y)`,  `x` is the starting value of `i` and `y` is 
 Traditionally loops tend to use the variables `i`, `j` and `k` and you may see lots of code that conforms to this convention. There is, however, no reason why you can’t use any other variable name especially if it makes your code more readable.
 
 ## Task 1
-Task file : [task-1.py](open_file "8-interation1/task-1.py").
+Task file : [task-1.py](open_file "8-iteration1/task-1.py").
 
 This file outputs the word computing 15 times. We use the variable `i` inside the loop.
 
@@ -542,7 +542,7 @@ It produces the following output
 ```
 
 ## Task 2
-Task file : [task-2.py](open_file "8-interation1/task-2.py").
+Task file : [task-2.py](open_file "8-iteration1/task-2.py").
 
 Write a program that takes in a letter and number then, using a `for` loop, prints out that letter that many times.
 
@@ -553,7 +553,7 @@ TTTTTT
 ```
 
 ## Task 3
-Task file : [task-3.py](open_file "8-interation1/task-3.py").
+Task file : [task-3.py](open_file "8-iteration1/task-3.py").
 
 Write a program that asks for a number then outputs it’s 10 times table.
 
@@ -578,7 +578,7 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 9-iteration2/start.py
+    path: 9-iteration2/play.py
     panel: 0
 layout: ""
 step: 9-iteration2
@@ -604,25 +604,26 @@ while x<5:
 ```
 Now try running the above code.
 
-## Task A
-Write a program that asks for a password and keeps asking until the correct password, `apple` is entered and then says `Accepted`
+## Task 1
+Task file : [task-1.py](open_file "9-iteration2/task-1.py").
 
-## Task B
+Write a program that asks for a password and keeps asking until the correct password, `apple` is entered and then says `Accepted`.
+
+## Task 2
+Task file : [task-2.py](open_file "9-iteration2/task-2.py").
+
 The sequence 1,4,9,16,25 is made up of square numbers (i.e.1=1^2, 4 = 2^2, 9=3^2 etc.). Write a program that writes out all the square numbers under 5000.
 
-## Task C
-The following code will create an integer x that is a random number between 1 and 100.
+## Task 3
+Task file : [task-3.py](open_file "9-iteration2/task-3.py").
 
-```python
-import random
-x=random.randint(1,100)
-```
+The following code will create an integer `x` that is a random number between 1 and 100.
 
-The line import random has to be put at the very top of the program you can use random.randint(1,100) wherever you want after that.
+The line `import random` has to be put at the very top of the program you can use `random.randint(1,100)` wherever you want after that.
 
 Write a program in which the computer thinks of a number between 1 and 100 (i.e. picks number at random). It should then ask the user to guess what number it is thinking of. It should then say whether the number the computer is thinking of is higher or lower than the one guessed. If the user guess correctly it should say well done and say how many guesses it took them if not it asks them to guess again.
 
-```bash
+```
 I am thinking of a number between 1-100.  Can you guess what it is? 50
 No, the number I am thinking of is higher than 50.  Can you guess what it is? 80
 No, the number I am thinking of is lower than 80.  Can you guess what it is? 60
