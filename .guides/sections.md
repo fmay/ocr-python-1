@@ -911,7 +911,7 @@ Task file : [task-2.py](open_file "11-lists/task-2.py").
 
 Write a program that asks the user to enter 5 names which it stores in a list. Next, get it to pick one of these names at random and declare that person as the winner. 
 
-*HINT: you will need to generate random numbers as in Task 9c*
+*HINT: you will need to generate random numbers as in Conditional Loops - Task 3*
 
 ```bash
 Please enter name 1:
@@ -1126,7 +1126,7 @@ Most real world programs need to be able to read and write data to files. Fortun
 To get Python to write to a file we first open it, write what we want to it and finally close it.
 
 ```python
-myFile = open('example.txt', 'wt')
+myFile = open('13-files/example.txt', 'wt')
 myFile.write('I have written to a file.')
 myFile.close()
 ```
@@ -1135,17 +1135,19 @@ Run this code. If you look in the same directory where you saved your program yo
 
 If we want multiple lines we can use the `\n` newline escape sequence.
 
-Feel free to copy and paste the code snippets below into `play.py`, then run it.
+Feel free to copy and paste the code snippets below into `play.py`, then run them individually.
 
 ```python
 # Write a file
-myFile = open('example.txt', 'wt')
+myFile = open('13-files/example.txt', 'wt')
 myFile.write('I have written to a file.\nIt now has three lines\nThe third being this one')
 myFile.close()
 Alternatively we can use spread it out over several lines (but note we still need the \n)
+```
 
+```python
 # Write a file
-myFile = open('example.txt', 'wt')
+myFile = open('13-files/example.txt', 'wt')
 myFile.write('I have written to a file.\n')
 myFile.write('It now has three lines.\n')
 myFile.write('The third being this one.\n')
@@ -1155,7 +1157,7 @@ myFile.close()
 ## Reading From Files
 Reading from files is equally as straight forward.
 
-Make sure you have run one of the above programs so you have the file `example.txt` containing:
+Make sure you have run one of the above programs so you have the file `13-files/example.txt` containing:
 
 ```
 I have written to a file.
@@ -1166,7 +1168,7 @@ The third being this one.
 Copy and run the following code:
 
 ```python
-myFile = open('example.txt', 'rt')
+myFile = open('13-files/example.txt', 'rt')
 contents = myFile.read()
 print(contents)
 myFile.close()
@@ -1174,12 +1176,12 @@ myFile.close()
 
 If all has worked the contents of your file should appear in your programming console.
 
-The rt and wt that appear in the open command stand for read text and write text. They tell Python the type of file you are opening and what access you need to it.
+The `rt` and `wt` that appear in the open command stand for read text and write text. They tell Python the type of file you are opening and what access you need to it.
 
 Sometimes we want to read a file line at a time. We do this using the readline command. If we want it to read all the lines in the file we can use a while loop. We tell the program to `readline` while we are not reading in an empty line (and so the end of the file). Of course you could change this to keep reading until it reaches any other string of your choice.
 
 ```python
-myFile = open('example.txt', 'rt')
+myFile = open('13-files/example.txt', 'rt')
 line = myFile.readline()
 while line!='':
 print(line)
@@ -1190,7 +1192,7 @@ myFile.close()
 An more elegant solution is to use a for loop.
 
 ```python
-myFile = open('example.txt', 'rt')
+myFile = open('13-files/example.txt', 'rt')
 for line in myFile:
      print(line)
 myFile.close()
