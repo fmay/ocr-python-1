@@ -1,8 +1,8 @@
 # Task 1
 # Press the 'Run File' menu button to execute
  
-city = input('What is the capital of France?')
-if city == 'Paris':
+city = input('What is the capital of France? ')
+if city == 'Paris' or 'paris':
      print('Well done')
 elif city == 'Lyon':
      print('Right country, wrong city')
